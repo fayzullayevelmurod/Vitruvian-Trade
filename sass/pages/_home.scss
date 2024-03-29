@@ -1,0 +1,23 @@
+.up_money {
+  margin-bottom: 88px;
+  .container {
+    border-radius: 20px;
+    padding: 55px;
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background: url(../images/up_money.png) no-repeat;
+    background-size: contain;
+    background-position: top right;
+  }
+  &-info-box {
+    max-width: 565px;
+  }
+  &-info {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 39px;
+    span {
+      color: #007bff;
+    }
+  }
+}

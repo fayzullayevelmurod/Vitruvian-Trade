@@ -1,9 +1,8 @@
 .header {
-  .container {
+  .container:first-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e2e2e2;
     padding: 28px 0;
   }
 
@@ -21,6 +20,113 @@
       display: flex;
       align-items: center;
       gap: 13px;
+      cursor: pointer;
+    }
+    &-number {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+  }
+  &_user-box {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+  &_user-icon {
+    background: #e2e2e2;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_user-name {
+    line-height: 20pt;
+    font-size: 16px;
+
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+  &_hellp-center {
+    gap: 23px;
+    display: flex;
+    margin-left: 65px;
+  }
+  &_color-mode {
+    border: 2px solid #e2e2e2;
+    border-radius: 16px;
+    width: 56px;
+    overflow: hidden;
+    margin: 0 26px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: #e2e2e2;
+      cursor: pointer;
+      transition: transform 0.3s ease-in;
+      transform: translateX(100%);
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+  &_language-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      .dropdown {
+        transform: scaleY(1);
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding-top: 18px;
+      flex-direction: column;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      z-index: 10;
+
+      & > div {
+        padding: 14px 12px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    .arrow_down {
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover .arrow_down {
+      transform: translateY(3px);
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       cursor: pointer;
     }
   }

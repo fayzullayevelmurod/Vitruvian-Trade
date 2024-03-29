@@ -3,9 +3,16 @@
   padding: 14px 35px;
   color: #fff;
   border-radius: 23px;
-  transition: background .3s ease;
-
+  transition: background 0.3s ease;
+  font-size: 17px;
+  width: fit-content;
+  // font-weight: 600;
   &:hover {
     background: #0365cd;
+  }
+  &.flex {
+    display: flex;
+    align-items: center;
+    gap: 13px;
   }
 }

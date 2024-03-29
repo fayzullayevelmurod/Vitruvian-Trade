@@ -22,6 +22,13 @@ h6 {
   line-height: 1.2;
 }
 
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 textarea:focus,
 select:focus {
   outline: none !important;
@@ -49,20 +56,54 @@ body {
   margin: 0;
   padding: 0;
 }
+body.dark .light_icon {
+  fill: #fff;
+}
+body.dark .blue_btn {
+  background: #12a2b8;
+}
+body.dark .dark_bg {
+  background: #1d2936;
+}
+body.dark .midnight_blue {
+  background: #1d2936 !important;
+}
+body.dark .dark_border {
+  border-color: #1d2936;
+}
 
 .wrapper {
   overflow: hidden;
+}
+
+:root {
+  --body-bg: #f5f5f5;
+}
+
+body.dark:root {
+  --body-bg: #121921;
 }
 
 body {
   font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
   background: #f5f5f5;
+  color: #343a40;
+  transition: all 0.2s ease-in-out;
+}
+body.dark {
+  color: #fff;
+  background: #121921;
 }
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 44px;
 }
 
 .blue_btn {
@@ -71,16 +112,22 @@ body {
   color: #fff;
   border-radius: 23px;
   transition: background 0.3s ease;
+  font-size: 17px;
+  width: fit-content;
 }
 .blue_btn:hover {
   background: #0365cd;
 }
+.blue_btn.flex {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
 
-.header .container {
+.header .container:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e2e2e2;
   padding: 28px 0;
 }
 .header_left {
@@ -98,4 +145,147 @@ body {
   align-items: center;
   gap: 13px;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}
+.header_wallet-number {
+  font-size: 16px;
+  font-weight: 600;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+}
+.header_user-box {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.header_user-icon {
+  background: #e2e2e2;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_user-name {
+  line-height: 20pt;
+  font-size: 16px;
+}
+.header_user-name:first-child {
+  font-weight: bold;
+}
+.header_hellp-center {
+  gap: 23px;
+  display: flex;
+  margin-left: 65px;
+}
+.header_color-mode {
+  border: 2px solid #e2e2e2;
+  border-radius: 16px;
+  width: 56px;
+  overflow: hidden;
+  margin: 0 26px;
+}
+.header_color-mode button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #e2e2e2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+  transform: translateX(100%);
+}
+.header_color-mode button.active {
+  transform: translateX(0);
+}
+.header_language-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_language-box:hover .dropdown {
+  transform: scaleY(1);
+}
+.header_language-box .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 18px;
+  flex-direction: column;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+.header_language-box .dropdown > div {
+  padding: 14px 12px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_language-box .arrow_down {
+  transition: transform 0.3s ease-in-out;
+}
+.header_language-box:hover .arrow_down {
+  transform: translateY(3px);
+}
+.header_language-box > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav {
+  width: 100%;
+  border-top: 1px solid #e2e2e2;
+}
+.nav_list {
+  display: flex;
+  gap: 62px;
+  justify-content: center;
+  padding: 31px 0 65px 0;
+}
+.nav_link {
+  color: #343a40;
+  font-size: 19px;
+  transition: color 0.2s ease;
+}
+.nav_link:hover {
+  color: #007bff;
+}
+
+.up_money {
+  margin-bottom: 88px;
+}
+.up_money .container {
+  border-radius: 20px;
+  padding: 55px;
+  box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background: url(../images/up_money.png) no-repeat;
+  background-size: contain;
+  background-position: top right;
+}
+.up_money-info-box {
+  max-width: 565px;
+}
+.up_money-info {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 39px;
+}
+.up_money-info span {
+  color: #007bff;
+}
+
+/*# sourceMappingURL=main.css.map */

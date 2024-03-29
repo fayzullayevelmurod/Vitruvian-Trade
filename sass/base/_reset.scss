@@ -21,7 +21,12 @@ h6 {
   text-decoration: none;
   line-height: 1.2;
 }
-
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 textarea:focus,
 select:focus {
   outline: none !important;
@@ -47,6 +52,24 @@ a:focus {
 body {
   margin: 0;
   padding: 0;
+
+  &.dark {
+    .light_icon {
+      fill: #fff;
+    }
+    .blue_btn {
+      background: #12a2b8;
+    }
+    .dark_bg {
+      background: #1d2936;
+    }
+    .midnight_blue {
+      background: #1d2936 !important;
+    }
+    .dark_border {
+      border-color: #1d2936;
+    }
+  }
 }
 .wrapper {
   overflow: hidden;
