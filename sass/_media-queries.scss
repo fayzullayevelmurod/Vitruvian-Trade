@@ -1,0 +1,27 @@
+// @mixin media($value) {
+//   @if ($value < 0) {
+//     @media screen and (min-width: calc($value * (-1)) + "px") {
+//       @content;
+//     }
+//   } @else {
+//     @media screen and (max-width: $value + "px") {
+//       @content;
+//     }
+//   }
+// }
+
+// .example {
+//   width: 100%;
+
+//   // for min-width
+//   @include media(-576) {
+//     width: 50%;
+//     background: green;
+//   }
+
+//   // for max-width
+//   @include media(576) {
+//     width: 30%;
+//     background: red;
+//   }
+// }
