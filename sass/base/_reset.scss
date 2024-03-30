@@ -131,7 +131,7 @@ body {
       background: #162331;
     }
     .up_money .container {
-      background: url(../images/dark_up-money@1.5x.png) no-repeat;
+      background: url(../images/dark_up-money.png) no-repeat;
       background-size: contain;
       background-position: top right;
     }
@@ -141,6 +141,13 @@ body {
     }
     .up_money .container {
       box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
+    }
+    .discount_card-left .dark_img {
+      display: none;
+    }
+    .discount_card-left .light_img {
+      display: block;
+      margin: 0 auto;
     }
   }
 }
