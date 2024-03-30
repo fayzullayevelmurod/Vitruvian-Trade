@@ -25,5 +25,23 @@ body {
 .title {
   text-align: center;
   font-size: 44px;
-  
+  font-weight: 900;
+}
+.title_info {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 798px;
+  margin: 37px auto 0 auto;
+  text-align: center;
+}
+.benefit_info {
+  color: #28a745;
+  font-size: 18px;
+  line-height: 30px;
+}
+.damage_info {
+  color: #ed3333;
+  font-size: 18px;
+  line-height: 30px;
 }

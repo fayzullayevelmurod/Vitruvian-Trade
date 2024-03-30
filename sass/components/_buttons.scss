@@ -6,7 +6,12 @@
   transition: background 0.3s ease;
   font-size: 17px;
   width: fit-content;
-  // font-weight: 600;
+  font-weight: 600;
+  box-shadow: 0px 10px 15px 0px rgba(0, 123, 255, 0.3);
+
+  &.no_shadow {
+    box-shadow: none;
+  }
   &:hover {
     background: #0365cd;
   }
@@ -14,5 +19,37 @@
     display: flex;
     align-items: center;
     gap: 13px;
+  }
+}
+.active_btn,
+.stopped_btn,
+.pending_btn {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 18px;
+  height: 32px;
+  line-height: 32px;
+  background: #28a745;
+  color: #fff;
+  transition: all 0.3s ease;
+  width: fit-content;
+  border-radius: 16px;
+
+  &:hover {
+    background: #218739;
+  }
+}
+.stopped_btn {
+  background: #ed3333;
+
+  &:hover {
+    background: #d92727;
+  }
+}
+.pending_btn {
+  background: #fd7e14;
+
+  &:hover {
+    background: #e9710e;
   }
 }

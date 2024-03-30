@@ -1,11 +1,12 @@
 .up_money {
-  margin-bottom: 88px;
+  max-width: 1030px;
+  margin: 0 auto;
   .container {
     border-radius: 20px;
     padding: 55px;
     box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
     display: flex;
-    background: url(../images/up_money.png) no-repeat;
+    background: url(../images/up_money.png) no-repeat #fff;
     background-size: contain;
     background-position: top right;
   }
@@ -20,4 +21,328 @@
       color: #007bff;
     }
   }
+}
+
+// statistics
+.statistics {
+  margin: 88px 0 96px 0;
+  &_boxes {
+    display: flex;
+    align-items: start;
+    margin-top: 74px;
+  }
+
+  &_box {
+    border-right: 1px solid #d1d1d1;
+    padding: 0 96px 0 84px;
+
+    &:last-child {
+      border: none;
+    }
+
+    &-title {
+      white-space: nowrap;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// connected_accounts
+.connected_accounts {
+  margin-bottom: 97px;
+
+  &-cards {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 55px;
+    gap: 19px;
+    flex-wrap: wrap;
+  }
+  &-card {
+    border-radius: 20px;
+    background: #fff;
+    padding: 20px;
+    flex: 1 1 0%;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+
+    &-info,
+    &-id {
+      margin-top: 13px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    &-id {
+      font-size: 15px;
+    }
+  }
+  .card_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-weight: 400;
+      line-height: 30px;
+    }
+    .benefit_info {
+      font-weight: 600;
+    }
+  }
+}
+
+// tariffs
+.tariffs {
+  margin-bottom: 92px;
+  .container {
+    position: relative;
+  }
+  &_bitcoin {
+    position: absolute;
+    top: 17%;
+    right: 48px;
+    animation: topfade 1s ease-in-out infinite alternate;
+  }
+  &_ethereum {
+    position: absolute;
+    left: 73px;
+    top: 9%;
+    animation: topfade 1s ease-in-out infinite alternate;
+  }
+  @keyframes topfade {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+  &_cards {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 61px 0 42px 0;
+  }
+  &_card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 42px 25px 32px 25px;
+    flex: 1 1 0%;
+    text-align: center;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+
+    &-title {
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 32px;
+      padding-top: 32px;
+    }
+    &-line {
+      width: 100px;
+      height: 1px;
+      background: #d1d1d1;
+      margin: 32px auto 35px auto;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      white-space: nowrap;
+    }
+    &-info {
+      font-weight: 300;
+    }
+    &-prosent {
+      font-weight: 600;
+    }
+  }
+
+  &_funds {
+    .range_btn {
+      text-align: center;
+    }
+    &-number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      p {
+        width: 230px;
+        color: #007bff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 22px;
+        font-weight: 600;
+
+        &.complete {
+          color: #28a745;
+        }
+      }
+    }
+    &-range {
+      margin-top: 43px;
+    }
+    .range_slider {
+      width: 100%;
+      height: 6px;
+      background: #e2e2e2;
+      position: relative;
+      z-index: 1;
+    }
+    .range_info {
+      font-size: 19px;
+      line-height: 32px;
+      margin: 37px 0 39px 11px;
+    }
+
+    .complete_box {
+      background: #28a745;
+      width: 160px;
+      height: 100%;
+    }
+    .range_slider-dots {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      gap: 38px;
+      z-index: 2;
+    }
+    .range_slider-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #12a2b8;
+
+      &.complete {
+        background: #edf3f2;
+        width: 39px;
+        height: 39px;
+        border: 2px solid #28a745;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .check_box {
+        background: #28a745;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 10px 25px 0px rgba(32, 201, 151, 0.35);
+      }
+    }
+  }
+}
+
+// discount
+.discount {
+  &_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+  }
+  &_card {
+    background: #e9e9e9;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    position: relative;
+    border: 1px solid transparent;
+
+    .refback_box {
+      background: #28a745;
+      border-radius: 18px;
+      padding: 0 27px;
+      height: 38px;
+      position: absolute;
+      top: -19px;
+      right: 0;
+      p {
+        white-space: nowrap;
+        line-height: 38px;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+    &-left {
+      height: 100%;
+      padding: 45px 64px 45px 53px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      text-align: center;
+      max-width: 335px;
+      width: 100%;
+      .blue_btn {
+        margin-top: 37px;
+      }
+    }
+    &-right {
+      background: #fff;
+      width: 100%;
+      padding: 45px 64px 45px 53px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      // gap: 80px;
+    }
+    &-box {
+      flex: 1 1 0%;
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+
+      &:first-child {
+        max-width: 365px;
+        p {
+          max-width: 275px;
+        }
+      }
+    }
+    &-box-top {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+    }
+    &-info {
+      font-size: 18px;
+      line-height: 24px;
+      span {
+        color: #007bff;
+        font-weight: 900;
+      }
+    }
+    &-title {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+marquee {
+  width: 100%; /* Elementning to'liq ekran eniga moslab o'tishini sozlash */
+  margin: auto; /* Elementni o'rtadan joylash */
 }

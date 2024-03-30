@@ -11,7 +11,8 @@
     color: #343a40;
     font-size: 19px;
     transition: color 0.2s ease;
-    &:hover {
+    &:hover,
+    &.active {
       color: #007bff;
     }
   }

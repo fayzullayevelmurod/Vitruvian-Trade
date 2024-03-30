@@ -42,7 +42,9 @@ button {
 input:focus {
   outline: none !important;
 }
-
+a {
+  display: inline-block;
+}
 a:active,
 a:focus {
   outline: 0;
@@ -54,20 +56,91 @@ body {
   padding: 0;
 
   &.dark {
-    .light_icon {
+    .discount_card-right {
+      background: #121921;
+    }
+    .footer {
+      background: #0e141a;
+    }
+    .light_icon,
+    .light_icon .st1 {
       fill: #fff;
     }
     .blue_btn {
-      background: #12a2b8;
+      background-color: #12a2b8;
     }
     .dark_bg {
-      background: #1d2936;
+      background-color: #1d2936;
+    }
+    .tariffs_funds .range_slider-dot.complete {
+      background-color: #1d2936;
     }
     .midnight_blue {
-      background: #1d2936 !important;
+      background-color: #1d2936 !important;
     }
     .dark_border {
       border-color: #1d2936;
+    }
+    .light_text {
+      color: #fff !important;
+    }
+    .nav .nav_link.active,
+    .nav .nav_link:hover,
+    .up_money-info span {
+      color: #12a2b8 !important;
+    }
+    .blue_btn {
+      box-shadow: 0px 10px 15px 0px rgba(18, 162, 184, 0.15);
+    }
+    .active_btn,
+    .discount_card .refback_box {
+      background: #20c997;
+    }
+    .pending_btn {
+      background: #ffc107;
+    }
+    .benefit_info {
+      color: #20c997;
+    }
+    .active_btn,
+    .stopped_btn,
+    .pending_btn {
+      color: #121921;
+    }
+    .discount_card .refback_box p {
+      color: #121921;
+      font-weight: 600;
+    }
+    .tariffs_card-line {
+      background: #2c3e50;
+    }
+    .tariffs_funds-number p.complete {
+      color: #20c997;
+    }
+    .tariffs_funds .complete_box,
+    .tariffs_funds .range_slider-dot .check_box {
+      background: #20c997;
+    }
+    .tariffs_funds .range_slider-dot .check_box {
+      box-shadow: 0px 10px 25px 0px rgba(32, 201, 151, 0.35);
+    }
+    .tariffs_funds-number p {
+      color: #12a2b8;
+    }
+    .footer .social_media a {
+      background: #162331;
+    }
+    .up_money .container {
+      background: url(../images/dark_up-money@1.5x.png) no-repeat;
+      background-size: contain;
+      background-position: top right;
+    }
+    .tariffs_bitcoin,
+    .tariffs_ethereum {
+      opacity: 0.3;
+    }
+    .up_money .container {
+      box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
     }
   }
 }
