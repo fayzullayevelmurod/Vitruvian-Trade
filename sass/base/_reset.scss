@@ -75,9 +75,11 @@ body {
       background: #0e141a;
     }
     .light_icon,
-    .light_icon .st1
-    .light_icon .st0 {
+    .light_icon,
+    .light_icon .st1 .light_icon .st0,
+    .close__nav-btn svg {
       fill: #fff;
+      stroke: #fff;
     }
     .blue_btn {
       background-color: #12a2b8;
@@ -155,7 +157,10 @@ body {
     .tariffs_ethereum {
       opacity: 0.3;
     }
-    .up_money .container {
+    .up_money .container,
+    .main__statistics .container,
+    .register__box,
+    .reviews .slide__box {
       box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
     }
     .dark_img {
@@ -185,6 +190,53 @@ body {
 
       svg path {
         fill: #fff;
+      }
+    }
+    .register__box .btns .gray_btn {
+      background: #fff;
+      color: #101010;
+    }
+    .main__statistics-header,
+    .main__statistics-tr:hover {
+      background: #18222d;
+    }
+    .main__statistics .line,
+    .works .line__box .box .child__box,
+    .works .line__box .box::before,
+    .accordion .accordion__btn {
+      background: #12a2b8;
+    }
+    .works .line__box .border,
+    .accordion .accordion__btn {
+      border-color: #12a2b8;
+    }
+    .accordion.active .accordion__btn {
+      background: #121921;
+    }
+    .works .line__box .box .child__box {
+      box-shadow: 0px 15px 20px 0px rgba(18, 162, 184, 0.3);
+    }
+    .benefit__card-img {
+      background: #121921;
+    }
+    .b-class .st1,
+    .a-class .st1,
+    .io .st0,
+    .gemini .st0,
+    .bite .st2,
+    .minus__icon .st0 {
+      fill: #fff;
+    }
+    .huobi .st0 {
+      fill: #282d5b;
+    }
+    .benefit__card {
+      border-color: #2a3c4b;
+    }
+
+    @media screen and (max-width: 700px) {
+      .nav {
+        background: #121921;
       }
     }
   }

@@ -17,7 +17,10 @@
     }
   }
 }
-
+.close__nav-btn,
+.open__nav-btn {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .nav_list {
     gap: 20px;
@@ -26,6 +29,7 @@
 
 @media screen and (max-width: 700px) {
   .nav {
+    border: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,5 +57,8 @@
       top: 20px;
       right: 20px;
     }
+  }
+  .open__nav-btn {
+    display: block;
   }
 }

@@ -80,8 +80,11 @@ body.dark .footer {
   background: #0e141a;
 }
 body.dark .light_icon,
-body.dark .light_icon .st1 .light_icon .st0 {
+body.dark .light_icon,
+body.dark .light_icon .st1 .light_icon .st0,
+body.dark .close__nav-btn svg {
   fill: #fff;
+  stroke: #fff;
 }
 body.dark .blue_btn {
   background-color: #12a2b8;
@@ -159,7 +162,10 @@ body.dark .tariffs_bitcoin,
 body.dark .tariffs_ethereum {
   opacity: 0.3;
 }
-body.dark .up_money .container {
+body.dark .up_money .container,
+body.dark .main__statistics .container,
+body.dark .register__box,
+body.dark .reviews .slide__box {
   box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
 }
 body.dark .dark_img {
@@ -189,6 +195,52 @@ body.dark .gray_btn {
 }
 body.dark .gray_btn svg path {
   fill: #fff;
+}
+body.dark .register__box .btns .gray_btn {
+  background: #fff;
+  color: #101010;
+}
+body.dark .main__statistics-header,
+body.dark .main__statistics-tr:hover {
+  background: #18222d;
+}
+body.dark .main__statistics .line,
+body.dark .works .line__box .box .child__box,
+body.dark .works .line__box .box::before,
+body.dark .accordion .accordion__btn {
+  background: #12a2b8;
+}
+body.dark .works .line__box .border,
+body.dark .accordion .accordion__btn {
+  border-color: #12a2b8;
+}
+body.dark .accordion.active .accordion__btn {
+  background: #121921;
+}
+body.dark .works .line__box .box .child__box {
+  box-shadow: 0px 15px 20px 0px rgba(18, 162, 184, 0.3);
+}
+body.dark .benefit__card-img {
+  background: #121921;
+}
+body.dark .b-class .st1,
+body.dark .a-class .st1,
+body.dark .io .st0,
+body.dark .gemini .st0,
+body.dark .bite .st2,
+body.dark .minus__icon .st0 {
+  fill: #fff;
+}
+body.dark .huobi .st0 {
+  fill: #282d5b;
+}
+body.dark .benefit__card {
+  border-color: #2a3c4b;
+}
+@media screen and (max-width: 700px) {
+  body.dark .nav {
+    background: #121921;
+  }
 }
 
 .wrapper {
@@ -522,10 +574,6 @@ body.dark {
   margin-right: 43px;
 }
 
-.close__nav-btn {
-  display: none;
-}
-
 @media screen and (max-width: 880px) {
   .header .container:first-child {
     padding: 20px 0;
@@ -698,6 +746,11 @@ body.dark {
   color: #007bff;
 }
 
+.close__nav-btn,
+.open__nav-btn {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .nav_list {
     gap: 20px;
@@ -705,6 +758,7 @@ body.dark {
 }
 @media screen and (max-width: 700px) {
   .nav {
+    border: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -730,6 +784,9 @@ body.dark {
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+  .open__nav-btn {
+    display: block;
   }
 }
 .up_money {
