@@ -67,6 +67,7 @@
     width: 56px;
     overflow: hidden;
     margin: 0 26px;
+    cursor: pointer;
 
     button {
       display: flex;
@@ -144,5 +145,46 @@
     display: flex;
     gap: 23px;
     margin-right: 43px;
+  }
+}
+.close__nav-btn {
+  display: none;
+}
+// media query start
+@media screen and (max-width: 880px) {
+  .header .container:first-child {
+    padding: 20px 0;
+  }
+  .header .register_btns {
+    display: none;
+  }
+  .header_left-logo svg {
+    width: 140px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header_user-icon {
+    display: none;
+  }
+  .header_color-mode {
+    margin: 0;
+    height: 28px;
+  }
+  .header_color-mode button {
+    height: 100%;
+    border-radius: 20px;
+    img {
+      width: 13px;
+    }
+  }
+  .header_right {
+    gap: 2px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header_left-logo svg {
+    width: 120px;
+    height: 35px;
   }
 }

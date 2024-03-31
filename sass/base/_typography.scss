@@ -56,3 +56,33 @@ body {
   font-size: 18px;
   line-height: 30px;
 }
+
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title__text,
+  .title {
+    font-size: 35px;
+  }
+  .title__info,
+  .title_info {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title__text,
+  .title {
+    font-size: 25px;
+  }
+  .title__info,
+  .title_info {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}

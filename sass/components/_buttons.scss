@@ -15,7 +15,7 @@
     box-shadow: none;
   }
   &:hover {
-    background: #0365cd;
+    background: #046ee0;
   }
   &.flex {
     display: flex;
@@ -28,7 +28,7 @@
   box-shadow: none;
 
   &:hover {
-    background: #23272b;
+    background: #414850;
   }
 }
 .gray_btn {
@@ -37,7 +37,8 @@
   color: #343a40;
 
   &:hover {
-    background: #cac9c9;
+    background: #d1d1d1;
+    color: #101010;
   }
 }
 .active_btn,
@@ -70,5 +71,17 @@
 
   &:hover {
     background: #e9710e;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .blue_btn,
+  .black_btn,
+  .gray_btn {
+    font-size: 16px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

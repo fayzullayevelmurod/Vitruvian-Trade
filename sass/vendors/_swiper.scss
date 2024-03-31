@@ -1,0 +1,36 @@
+.swiper__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+  margin-top: -24px;
+  .swiper-btn-next,
+  .swiper-btn-prev {
+    cursor: pointer;
+
+    &:hover {
+      svg path {
+        fill: #007bff;
+      }
+    }
+    svg {
+      width: 24px;
+      height: 21px;
+      path {
+        transition: all 0.2s linear;
+        fill: #d0d0d0;
+      }
+    }
+  }
+}
+
+.swiper-slide {
+  margin-top: 64px;
+  // transform: translateY(64px);
+  transition: all 0.3s linear;
+}
+.swiper-slide-active {
+  margin-top: 0;
+}

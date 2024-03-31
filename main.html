@@ -121,12 +121,6 @@
                 <p class="country__name">EN</p>
               </div>
             </div>
-            <!-- <div class="eng">
-              <div class="option__value">
-                <img src="images/icons/flag-united-kingdom.svg" alt="flag-united-kingdom" width="25" height="18">
-                <p class="country_name">EN</p>
-              </div>
-            </div> -->
             <div class="dropdown">
               <div class="option__value midnight_blue">
                 <img src="images/icons/flag-ru.svg" alt="flag-ru" width="25" height="18">
@@ -143,10 +137,22 @@
               <polygon class="st0" points="4,3.2 0.8,0 0,0.8 4,4.8 8,0.8 7.2,0 " />
             </svg>
           </div>
+          <button class="open__nav-btn">
+            <svg width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 light_icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
         </div>
       </div>
       <div class="container">
         <nav class="nav dark_border">
+          <button class="close__nav-btn">
+            <svg width="20px" heght="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
           <ul class="nav_list">
             <li class="nav_item">
               <a class="nav_link light_text" href="#!">Статистика</a>
@@ -211,90 +217,92 @@
 
         <div class="main__statistics">
           <div class="container">
-            <div class="main__statistics-header">
-              <div class="statistics__header-box">
-                <h5 class="statistics__header-title">Лидеры по прибыли </h5>
-                <p class="statistics__header-info">
-                  <img src="images/icons/money-bag$.svg" alt="money-bag" width="22" height="23">
-                  <span>Доходность в $</span>
-                </p>
-              </div>
-              <div class="statistics__header-box">
-                <h5 class="statistics__header-title">Лидеры по прибыли </h5>
-                <p class="statistics__header-info">
-                  <img src="images/icons/money-bag-procent.svg" alt="money-bag" width="22" height="23">
-                  <span>Доходность в %</span>
-                </p>
-              </div>
-            </div>
-            <div class="main__statistics-table">
-              <div class="main__statistics-box">
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Evgenii Vlasovskii</p>
-                    <div class="user__rating first">1</div>
-                  </div>
-                  <p class="benefit_info">3754.225 $</p>
+            <div class="scroll__box">
+              <div class="main__statistics-header">
+                <div class="statistics__header-box">
+                  <h5 class="statistics__header-title">Лидеры по прибыли </h5>
+                  <p class="statistics__header-info">
+                    <img src="images/icons/money-bag$.svg" alt="money-bag" width="22" height="23">
+                    <span>Доходность в $</span>
+                  </p>
                 </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Alex M</p>
-                    <div class="user__rating second">1</div>
-                  </div>
-                  <p class="benefit_info">3754.225 $</p>
-                </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Mark 125</p>
-                    <div class="user__rating third">1</div>
-                  </div>
-                  <p class="benefit_info">3754.225 $</p>
-                </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Alexandr Malikov7756</p>
-                    <div class="user__rating">1</div>
-                  </div>
-                  <p class="benefit_info">3754.225 $</p>
+                <div class="statistics__header-box">
+                  <h5 class="statistics__header-title">Лидеры по прибыли </h5>
+                  <p class="statistics__header-info">
+                    <img src="images/icons/money-bag-procent.svg" alt="money-bag" width="22" height="23">
+                    <span>Доходность в %</span>
+                  </p>
                 </div>
               </div>
-              <div class="line"></div>
-              <div class="main__statistics-box">
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Evgenii Vlasovskii</p>
-                    <div class="user__rating first">1</div>
+              <div class="main__statistics-table">
+                <div class="main__statistics-box">
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Evgenii Vlasovskii</p>
+                      <div class="user__rating first">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
                   </div>
-                  <p class="benefit_info">3754.225 $</p>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Alex M</p>
+                      <div class="user__rating second">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
+                  </div>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Mark 125</p>
+                      <div class="user__rating third">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
+                  </div>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Alexandr Malikov7756</p>
+                      <div class="user__rating">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
+                  </div>
                 </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Alex M</p>
-                    <div class="user__rating second">1</div>
+                <div class="line"></div>
+                <div class="main__statistics-box">
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Evgenii Vlasovskii</p>
+                      <div class="user__rating first">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
                   </div>
-                  <p class="benefit_info">3754.225 $</p>
-                </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Mark 125</p>
-                    <div class="user__rating third">1</div>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Alex M</p>
+                      <div class="user__rating second">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
                   </div>
-                  <p class="benefit_info">3754.225 $</p>
-                </div>
-                <div class="main__statistics-tr">
-                  <div class="user">
-                    <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
-                    <p class="user__name">Alexandr Malikov7756</p>
-                    <div class="user__rating">1</div>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Mark 125</p>
+                      <div class="user__rating third">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
                   </div>
-                  <p class="benefit_info">3754.225 $</p>
+                  <div class="main__statistics-tr">
+                    <div class="user">
+                      <img class="user__img" src="images/user__img.png" alt="user img" width="51" height="51">
+                      <p class="user__name">Alexandr Malikov7756</p>
+                      <div class="user__rating">1</div>
+                    </div>
+                    <p class="benefit_info">3754.225 $</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -847,6 +855,495 @@
         </div>
       </section>
 
+      <!-- reviews -->
+      <section class="reviews">
+        <div class="container">
+          <h1 class="title__text">Наши ученики о нас</h1>
+          <p class="title_info">
+            Отзывы наших учеников, которые уже стали успешными трейдерами
+          </p>
+
+          <div class="sliders">
+            <div class="swiper reviews-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-1.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Alex Petitskii</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Я использую Vitruvian Trade с платным сигналом и стратегией уже более года. И даже в условиях
+                      американских горок на рынке, я все еще в плюсе на 35% за год! Удобство и множество руководств...
+                      Я использую Vitruvian Trade с платным сигналом и стратегией
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-2.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Maxim Fellingerd</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Vitruvian Trade!!! Именно такой я всегда представлял себе автоматизированную торговлю. Этот
+                      торговый
+                      бот изменил мою жизнь во многих отношениях. Я не только нашел отличный способ... Именно
+                      такой я всегда представлял себе
+                      автоматизированную торговлю.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-3.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Mary Boltonar</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Я использую Vitruvian Trade с платным сигналом и стратегией уже более года. И даже в условиях
+                      американских горок на рынке, я все еще в плюсе на 35% за год! Удобство и множество руководств...
+                      Я использую Vitruvian Trade с платным сигналом и стратегией
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-1.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Alex Petitskii</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Я использую Vitruvian Trade с платным сигналом и стратегией уже более года. И даже в условиях
+                      американских горок на рынке, я все еще в плюсе на 35% за год! Удобство и множество руководств...
+                      Я использую Vitruvian Trade с платным сигналом и стратегией
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-2.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Maxim Fellingerd</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Vitruvian Trade!!! Именно такой я всегда представлял себе автоматизированную торговлю. Этот
+                      торговый
+                      бот изменил мою жизнь во многих отношениях. Я не только нашел отличный способ... Именно
+                      такой я всегда представлял себе
+                      автоматизированную торговлю.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide__box">
+                    <div class="slide__box-top">
+                      <img src="images/user-3.png" alt="user img" width="80" height="80">
+                      <div>
+                        <p class="user__name">Mary Boltonar</p>
+                        <div class="user__rating">
+                          <div class="stars">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <img src="images/icons/star.svg" alt="star" width="16" height="16">
+                            <svg class="c-classs" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-classs .st0 {
+                                  fill: #FFC107 !important;
+                                }
+
+                                .c-classs .st1 {
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <g>
+                                <path class="st0" d="M400,0c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9
+      l206.4,149.9l-78.8,242.6c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l0,0L400,0
+      C400,0,400,0,400,0z" />
+                                <path class="st1"
+                                  d="M646.1,757.7c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9c11.9-8.7,16.8-24,12.2-37.9v0
+      c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0v607.8l206.3,149.9C618.2,766.3,634.2,766.3,646.1,757.7z" />
+                              </g>
+                            </svg>
+                            <svg class="c-class" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16"
+                              viewBox="0 0 800 764.1" style="enable-background:new 0 0 800 764.1;" xml:space="preserve">
+                              <style type="text/css">
+                                .c-class .st0 {
+                                  fill-rule: evenodd;
+                                  clip-rule: evenodd;
+                                  fill: #d0d0d0;
+                                }
+                              </style>
+                              <path class="st0" d="M798.3,289.4c-4.6-14-17.5-23.4-32.2-23.4h-255L432.3,23.4v0C427.7,9.4,414.7,0,400,0
+    c-14.7,0-27.7,9.4-32.2,23.4L288.9,266h-255c-14.7,0-27.7,9.4-32.2,23.4c-4.6,14,0.3,29.2,12.3,37.9l206.4,149.9l-78.8,242.6
+    c-4.6,14,0.5,29.3,12.4,37.9c5.9,4.3,12.9,6.5,19.9,6.5c7,0,13.9-2.2,19.9-6.5L400,607.8l206.3,149.9c11.9,8.7,28,8.7,39.9,0
+    c12-8.6,16.9-23.9,12.4-37.9l-78.8-242.5l206.4-149.9C798,318.6,802.9,303.3,798.3,289.4" />
+                            </svg>
+                          </div>
+                          <span class="date">12.01.2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="slide__info">
+                      Я использую Vitruvian Trade с платным сигналом и стратегией уже более года. И даже в условиях
+                      американских горок на рынке, я все еще в плюсе на 35% за год! Удобство и множество руководств...
+                      Я использую Vitruvian Trade с платным сигналом и стратегией
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper__btns">
+                <div class="swiper-btn-prev">
+                  <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="466.7px" height="400px"
+                    viewBox="0 0 466.7 400" style="enable-background:new 0 0 466.7 400;" xml:space="preserve">
+                    <path class="st0" d="M200,0c8.5,0,17.1,3.3,23.6,9.8c13,13,13,34.1,0,47.1L113.8,166.7h319.5c18.4,0,33.3,14.9,33.3,33.3
+    s-14.9,33.3-33.3,33.3H113.8l109.8,109.8c13,13,13,34.1,0,47.1s-34.1,13-47.1,0L9.8,223.6c-3.5-3.5-6-7.5-7.6-11.8
+    c-1.1-2.9-1.8-6.1-2-9.3l0,0l0,0C0,201.6,0,200.8,0,200s0-1.6,0.1-2.3l0,0l0,0c0.2-3.3,0.9-6.4,2-9.3c1.6-4.3,4.2-8.3,7.6-11.8
+    L176.4,9.8C182.9,3.3,191.5,0,200,0z" />
+                  </svg>
+                </div>
+                <div class="swiper-btn-next">
+                  <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="466.7px" height="400px"
+                    viewBox="0 0 466.7 400" style="enable-background:new 0 0 466.7 400;" xml:space="preserve">
+                    <path class="st0" d="M266.7,400c-8.5,0-17.1-3.3-23.6-9.8c-13-13-13-34.1,0-47.1l109.8-109.8H33.3C14.9,233.3,0,218.4,0,200
+    s14.9-33.3,33.3-33.3h319.5L243.1,56.9c-13-13-13-34.1,0-47.1s34.1-13,47.1,0l166.7,166.7c3.5,3.5,6,7.5,7.6,11.8
+    c1.1,2.9,1.8,6.1,2,9.3l0,0l0,0c0.1,0.8,0.1,1.6,0.1,2.3c0,0.8,0,1.6-0.1,2.3l0,0l0,0c-0.2,3.3-0.9,6.4-2,9.3
+    c-1.6,4.3-4.2,8.3-7.6,11.8L290.2,390.2C283.7,396.7,275.2,400,266.7,400z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faq -->
+      <section class="faq">
+        <div class="container">
+          <h1 class="title__text">Часто задаваемые вопросы</h1>
+          <p class="title_info">Ответы на самые задаваемые вопросы о работе Vitruvian Trade</p>
+
+          <div class="accordion">
+            <div class="accordion__btn">
+              <img class="plus__icon" src="images/icons/plus.svg" alt="plus img" width="16" height="16">
+              <img class="minus__icon" src="images/icons/minus.svg" alt="minus img" width="16" height="16">
+            </div>
+            <div class="accordion__header">
+              <h5 class="accordion__header-text">Как использовать Lite-версию приложения Vitruvian Trade для покупки и
+                продажи криптовалют ?</h5>
+            </div>
+            <div class="accordion__content collapsed">
+              <p class="accordion__content-text">
+                Чтобы найти запись о выводе криптовалюты, войдите в аккаунт Binance, перейдите в раздел Кошелек > Обзор
+                кошелька >
+                История транзакций. Если транзакция имеет Статус «В обработке», дождитесь завершения процесса
+                подтверждения. Убедитесь,
+                что платформа или кошелек получателя поддерживает токены, которые вы выводите, и используемую сеть до
+                вывода средств.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion__btn">
+              <img class="plus__icon" src="images/icons/plus.svg" alt="plus img" width="16" height="16">
+              <img class="minus__icon" src="images/icons/minus.svg" alt="minus img" width="16" height="16">
+            </div>
+            <div class="accordion__header">
+              <h5 class="accordion__header-text">Почему вывод средств еще не поступил?</h5>
+            </div>
+            <div class="accordion__content collapsed">
+              <p class="accordion__content-text">
+                Чтобы найти запись о выводе криптовалюты, войдите в аккаунт Binance, перейдите в раздел Кошелек > Обзор
+                кошелька >
+                История транзакций. Если транзакция имеет Статус «В обработке», дождитесь завершения процесса
+                подтверждения. Убедитесь,
+                что платформа или кошелек получателя поддерживает токены, которые вы выводите, и используемую сеть до
+                вывода средств.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion__btn">
+              <img class="plus__icon" src="images/icons/plus.svg" alt="plus img" width="16" height="16">
+              <img class="minus__icon" src="images/icons/minus.svg" alt="minus img" width="16" height="16">
+            </div>
+            <div class="accordion__header">
+              <h5 class="accordion__header-text">Начните пользоваться Vitruvian Trade Lite, чтобы купить и продать
+                криптовалюту?</h5>
+            </div>
+            <div class="accordion__content collapsed">
+              <p class="accordion__content-text">
+                Чтобы найти запись о выводе криптовалюты, войдите в аккаунт Binance, перейдите в раздел Кошелек > Обзор
+                кошелька >
+                История транзакций. Если транзакция имеет Статус «В обработке», дождитесь завершения процесса
+                подтверждения. Убедитесь,
+                что платформа или кошелек получателя поддерживает токены, которые вы выводите, и используемую сеть до
+                вывода средств.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- bonus -->
+      <section class="bonus">
+        <div class="container">
+          <div class="bonus__images">
+            <img class="img__1" src="images/icons/tehter1.svg" alt="" width="113" height="111">
+            <img class="img__2" src="images/icons/t.png" alt="" width="64" height="73">
+            <img class="img__3" src="images/icons/tehter3.svg" alt="" width="36" height="67">
+            <img class="img__4" src="images/icons/tehter1.svg" alt="" width="70" height="69">
+            <img class="img__5" src="images/icons/tehter2.svg" alt="" width="104" height="68">
+          </div>
+          <h2 class="bonus__title">Зарегистрируйтесь сейчас </h2>
+          <p class="bonus__info">и мгновенно получите бонусные <span>10 USDT</span> на счет</p>
+          <a class="blue_btn" href="#!">Получить бонус</a>
+        </div>
+      </section>
+
     </main>
 
 
@@ -997,6 +1494,8 @@
 
   </div>
 
+  <!-- swiper js -->
+  <script src="libs/swiper/swiper.min.js"></script>
   <!-- custom js -->
   <script src="./js/script.js"></script>
 </body>
