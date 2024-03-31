@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="OBJECTS" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="70.1px" height="69.9px" viewBox="0 0 70.1 69.9" style="enable-background:new 0 0 70.1 69.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7F7F7F;}
+	.st1{fill:#DDB926;}
+	.st2{fill:#D3D3D3;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:url(#SVGID_1_);}
+	.st5{opacity:0.3;fill:#92F4CC;}
+</style>
+<g>
+	<ellipse transform="matrix(0.2326 -0.9726 0.9726 0.2326 -6.973 61.0464)" class="st0" cx="35.2" cy="34.9" rx="34.9" ry="34.9"/>
+	<circle class="st1" cx="34.2" cy="34.5" r="34.2"/>
+	<circle class="st2" cx="34.2" cy="34.5" r="34.2"/>
+	<circle class="st0" cx="35" cy="33.7" r="24.6"/>
+	<circle class="st3" cx="32.3" cy="36.4" r="24.8"/>
+	<circle class="st2" cx="33.4" cy="35.4" r="24.8"/>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.8091" y1="34.4272" x2="45.4754" y2="34.4272">
+			<stop  offset="0" style="stop-color:#C0C8D2"/>
+			<stop  offset="0.1845" style="stop-color:#838C9C"/>
+			<stop  offset="0.4483" style="stop-color:#C2CAD3"/>
+			<stop  offset="0.6455" style="stop-color:#F1F2F7"/>
+			<stop  offset="0.7962" style="stop-color:#AAB3C2"/>
+			<stop  offset="0.9691" style="stop-color:#5A6578"/>
+		</linearGradient>
+		<path class="st4" d="M42.7,38.2c-1.3-1.2-2.9-1.8-4.4-1.8c-1.2,0-2.1-0.9-2.1-2l0,0c0-1.3,1.1-2.2,2.3-2.1
+			c2.4,0.2,4.9-0.9,6.2-3.2c1.6-2.9,0.7-6.6-2-8.4c-3-2-7.1-1.1-8.9,2c-1.2,2-1.2,4.4-0.2,6.3c0.6,1.2,0.2,2.6-1,3.2l-0.1,0
+			c-1,0.5-2.3,0.2-2.9-0.8c-0.7-1.1-1.7-2-3-2.5c-2.5-1-5.3-0.3-7.1,1.7c-2.9,3.3-1.7,8.4,2.4,10.1c2.5,1,5.4,0.3,7.1-1.6
+			c0.6-0.7,1-1.4,1.3-2.2c0.4-1.1,1.7-1.7,2.7-1L33,36c0.9,0.6,1.2,1.8,0.5,2.7c-0.4,0.5-0.8,1.1-1.1,1.8c-1,2.5-0.3,5.4,1.7,7.1
+			c3.3,2.9,8.4,1.7,10.1-2.4C45.2,42.8,44.6,40,42.7,38.2z"/>
+		<path class="st3" d="M41.4,36.9c-1.3-1.2-2.9-1.8-4.4-1.8c-1.2,0-2.1-0.9-2.1-2l0,0c0-1.3,1.1-2.2,2.3-2.1
+			c2.4,0.2,4.9-0.9,6.2-3.2c1.6-2.9,0.7-6.6-2-8.4c-3-2-7.1-1.1-8.9,2c-1.2,2-1.2,4.4-0.2,6.3c0.6,1.2,0.2,2.6-1,3.2l-0.1,0
+			c-1,0.5-2.3,0.2-2.9-0.8c-0.7-1.1-1.7-2-3-2.5c-2.5-1-5.3-0.3-7.1,1.7c-2.9,3.3-1.7,8.4,2.4,10.1c2.5,1,5.4,0.3,7.1-1.6
+			c0.6-0.7,1-1.4,1.3-2.2c0.4-1.1,1.7-1.7,2.7-1l0.1,0.1c0.9,0.6,1.2,1.8,0.5,2.7c-0.4,0.5-0.8,1.1-1.1,1.8c-1,2.5-0.3,5.4,1.7,7.1
+			c3.3,2.9,8.4,1.7,10.1-2.4C43.8,41.5,43.2,38.6,41.4,36.9z"/>
+	</g>
+	<path class="st5" d="M52.5,5.8L4.7,50.9c3,5.9,7.7,10.8,13.5,14L65.7,20C62.8,14.1,58.2,9.1,52.5,5.8z"/>
+</g>
+</svg>
