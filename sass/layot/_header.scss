@@ -148,6 +148,20 @@
   }
 }
 // media query start
+@media screen and (max-width: 1260px) {
+  .header_hellp-center {
+    margin-left: 10px;
+  }
+  .header_wallet {
+    margin-left: 30px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .header_wallet {
+    display: none;
+  }
+}
 @media screen and (max-width: 880px) {
   .header .container:first-child {
     padding: 20px 0;
@@ -158,6 +172,11 @@
   .header_left-logo svg {
     width: 140px;
     height: 40px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .header_user-box {
+    display: none;
   }
 }
 @media screen and (max-width: 576px) {
@@ -176,7 +195,7 @@
     }
   }
   .header_right {
-    gap: 2px;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 400px) {

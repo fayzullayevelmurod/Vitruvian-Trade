@@ -242,6 +242,9 @@ body.dark .benefit__card {
     background: #121921;
   }
 }
+body.dark .search__form input {
+  color: #fff;
+}
 
 .wrapper {
   overflow: hidden;
@@ -574,6 +577,20 @@ body.dark {
   margin-right: 43px;
 }
 
+@media screen and (max-width: 1260px) {
+  .header_hellp-center {
+    margin-left: 10px;
+  }
+  .header_wallet {
+    margin-left: 30px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .header_wallet {
+    display: none;
+  }
+}
 @media screen and (max-width: 880px) {
   .header .container:first-child {
     padding: 20px 0;
@@ -584,6 +601,11 @@ body.dark {
   .header_left-logo svg {
     width: 140px;
     height: 40px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .header_user-box {
+    display: none;
   }
 }
 @media screen and (max-width: 576px) {
@@ -602,7 +624,7 @@ body.dark {
     width: 13px;
   }
   .header_right {
-    gap: 2px;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1124,6 +1146,9 @@ marquee {
 }
 .balance__boxes {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 20px;
   align-items: center;
   justify-content: space-between;
   background: #fff;
@@ -1133,6 +1158,10 @@ marquee {
 .balance__box {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+.balance__box a {
+  flex: 1 1 0%;
 }
 .balance__box:last-child {
   gap: 15px;
@@ -1151,6 +1180,9 @@ marquee {
 
 .search {
   display: flex;
+  gap: 1rem;
+  row-gap: 20px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: 47px 0 45px 0;
@@ -1279,6 +1311,27 @@ marquee {
   color: #28a745;
 }
 
+@media screen and (max-width: 576px) {
+  .balance__boxes {
+    padding: 20px;
+  }
+  .balance__box p {
+    font-size: 22px;
+  }
+  .cripto__catalog-header .left__box {
+    gap: 25px;
+  }
+  .cripto__catalog-header > div {
+    max-width: 100%;
+  }
+  .cripto__catalog-header p:last-child {
+    margin-right: 10px;
+  }
+  .balance {
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+}
 .main__intro {
   margin-top: 50px;
 }
