@@ -51,6 +51,12 @@ a:focus {
   border: none;
   -moz-outline-style: none;
 }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -59,11 +65,18 @@ body {
     .discount_card-right {
       background: #121921;
     }
+    .dark_blue {
+      color: #12a2b8;
+    }
+    .dark_green {
+      color: #1fc896 !important;
+    }
     .footer {
       background: #0e141a;
     }
     .light_icon,
-    .light_icon .st1 {
+    .light_icon .st1
+    .light_icon .st0 {
       fill: #fff;
     }
     .blue_btn {
@@ -80,6 +93,9 @@ body {
     }
     .dark_border {
       border-color: #1d2936;
+    }
+    .dark_border-two {
+      border-color: #243444;
     }
     .light_text {
       color: #fff !important;
@@ -142,15 +158,40 @@ body {
     .up_money .container {
       box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
     }
-    .discount_card-left .dark_img {
+    .dark_img {
+      display: block;
+    }
+    .light_img {
       display: none;
     }
-    .discount_card-left .light_img {
-      display: block;
-      margin: 0 auto;
+    .discount_card-info span {
+      color: #12a2b8;
+    }
+    .cripto__catalog-tr .cripto__price {
+      color: #53677c;
+    }
+    .search .check__box label .icon__box {
+      background: #18222d;
+    }
+    .cripto__catalog-header {
+      background: #253444;
+    }
+    .black_btn {
+      background: #121921;
+    }
+    .gray_btn {
+      background: #253444;
+      color: #fff;
+
+      svg path {
+        fill: #fff;
+      }
     }
   }
 }
 .wrapper {
   overflow: hidden;
+}
+.dark_img {
+  display: none;
 }

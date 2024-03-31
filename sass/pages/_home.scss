@@ -295,8 +295,8 @@
       .blue_btn {
         margin-top: 37px;
       }
-      .light_img {
-        display: none;
+      img {
+        margin: 0 auto;
       }
     }
     &-right {
@@ -308,7 +308,6 @@
       display: flex;
       align-items: start;
       justify-content: space-between;
-      // gap: 80px;
     }
     &-box {
       flex: 1 1 0%;

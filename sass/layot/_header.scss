@@ -54,6 +54,9 @@
     }
   }
   &_hellp-center {
+    &.no_ml {
+      margin-left: 0;
+    }
     gap: 23px;
     display: flex;
     margin-left: 65px;
@@ -116,6 +119,13 @@
         gap: 10px;
       }
     }
+    .eng {
+      display: flex;
+      gap: 10px;
+    }
+    .option__value .eng {
+      gap: 10px;
+    }
     .arrow_down {
       transition: transform 0.3s ease-in-out;
     }
@@ -129,5 +139,10 @@
       gap: 10px;
       cursor: pointer;
     }
+  }
+  .register_btns {
+    display: flex;
+    gap: 23px;
+    margin-right: 43px;
   }
 }

@@ -1,0 +1,170 @@
+.balance {
+  margin-bottom: 310px;
+  &__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 20px;
+    padding: 37px 29px 37px 36px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      gap: 15px;
+    }
+    p {
+      font-size: 24px;
+      margin: 0 17px 0 13px;
+      font-weight: 900;
+    }
+    .balance__info {
+      font-weight: 400;
+      font-size: 20px;
+      color: #007bff;
+      margin: 0;
+    }
+  }
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 47px 0 45px 0;
+  &__form {
+    position: relative;
+    max-width: 635px;
+    width: 100%;
+    input {
+      width: 100%;
+      border-radius: 10px;
+      background: #e2e2e2;
+      border: none;
+      padding: 17px 19px;
+      font-size: 17px;
+      color: #53677c;
+
+      &::placeholder {
+        color: #53677c;
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .check__box {
+    input {
+      display: none;
+    }
+    input:checked + label .icon__box {
+      &::after {
+        transform: scale(1) translate(-50%, -50%);
+      }
+    }
+    label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      font-size: 17px;
+      cursor: pointer;
+      .icon__box {
+        width: 24px;
+        height: 24px;
+        background: #e2e2e2;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+          content: "";
+          transition: all 0.3s ease-in-out;
+          transform-origin: center;
+          background-image: url(../../images/icons/tick.svg);
+          width: 10px;
+          height: 8px;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          transform: scale(0) translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.cripto__catalog {
+  &-header {
+    background: #343a40;
+    border-radius: 10px;
+    padding: 18px 25px;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 625px;
+      width: 100%;
+    }
+    .left__box {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+
+      .nft__text {
+        color: #909eac;
+        font-size: 17px;
+      }
+    }
+    p {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  &-tr {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 12px 0;
+    margin: 0 29px 0 24px;
+    &:first-child {
+      padding-top: 18px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 632px;
+      width: 100%;
+      gap: 1rem;
+    }
+    .left__box {
+      display: flex;
+      gap: 16px;
+      align-items: start;
+    }
+    .right__box {
+      .cripto__price {
+        color: #53677c;
+      }
+    }
+    .cripto__name {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .cripto__price {
+      font-size: 15px;
+      line-height: 22px;
+      .cripto__up {
+        color: #28a745;
+      }
+    }
+  }
+}

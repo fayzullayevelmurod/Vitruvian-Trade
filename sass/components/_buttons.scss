@@ -1,4 +1,6 @@
-.blue_btn {
+.blue_btn,
+.black_btn,
+.gray_btn {
   background: #007bff;
   padding: 14px 35px;
   color: #fff;
@@ -19,6 +21,23 @@
     display: flex;
     align-items: center;
     gap: 13px;
+  }
+}
+.black_btn {
+  background: #343a40;
+  box-shadow: none;
+
+  &:hover {
+    background: #23272b;
+  }
+}
+.gray_btn {
+  box-shadow: none;
+  background: #e2e2e2;
+  color: #343a40;
+
+  &:hover {
+    background: #cac9c9;
   }
 }
 .active_btn,

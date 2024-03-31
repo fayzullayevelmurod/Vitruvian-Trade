@@ -56,6 +56,13 @@ a:focus {
   -moz-outline-style: none;
 }
 
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -63,11 +70,17 @@ body {
 body.dark .discount_card-right {
   background: #121921;
 }
+body.dark .dark_blue {
+  color: #12a2b8;
+}
+body.dark .dark_green {
+  color: #1fc896 !important;
+}
 body.dark .footer {
   background: #0e141a;
 }
 body.dark .light_icon,
-body.dark .light_icon .st1 {
+body.dark .light_icon .st1 .light_icon .st0 {
   fill: #fff;
 }
 body.dark .blue_btn {
@@ -84,6 +97,9 @@ body.dark .midnight_blue {
 }
 body.dark .dark_border {
   border-color: #1d2936;
+}
+body.dark .dark_border-two {
+  border-color: #243444;
 }
 body.dark .light_text {
   color: #fff !important;
@@ -146,16 +162,41 @@ body.dark .tariffs_ethereum {
 body.dark .up_money .container {
   box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.3);
 }
-body.dark .discount_card-left .dark_img {
+body.dark .dark_img {
+  display: block;
+}
+body.dark .light_img {
   display: none;
 }
-body.dark .discount_card-left .light_img {
-  display: block;
-  margin: 0 auto;
+body.dark .discount_card-info span {
+  color: #12a2b8;
+}
+body.dark .cripto__catalog-tr .cripto__price {
+  color: #53677c;
+}
+body.dark .search .check__box label .icon__box {
+  background: #18222d;
+}
+body.dark .cripto__catalog-header {
+  background: #253444;
+}
+body.dark .black_btn {
+  background: #121921;
+}
+body.dark .gray_btn {
+  background: #253444;
+  color: #fff;
+}
+body.dark .gray_btn svg path {
+  fill: #fff;
 }
 
 .wrapper {
   overflow: hidden;
+}
+
+.dark_img {
+  display: none;
 }
 
 :root {
@@ -210,7 +251,9 @@ body.dark {
   line-height: 30px;
 }
 
-.blue_btn {
+.blue_btn,
+.black_btn,
+.gray_btn {
   background: #007bff;
   padding: 14px 35px;
   color: #fff;
@@ -221,16 +264,39 @@ body.dark {
   font-weight: 600;
   box-shadow: 0px 10px 15px 0px rgba(0, 123, 255, 0.3);
 }
-.blue_btn.no_shadow {
+.blue_btn.no_shadow,
+.black_btn.no_shadow,
+.gray_btn.no_shadow {
   box-shadow: none;
 }
-.blue_btn:hover {
+.blue_btn:hover,
+.black_btn:hover,
+.gray_btn:hover {
   background: #0365cd;
 }
-.blue_btn.flex {
+.blue_btn.flex,
+.black_btn.flex,
+.gray_btn.flex {
   display: flex;
   align-items: center;
   gap: 13px;
+}
+
+.black_btn {
+  background: #343a40;
+  box-shadow: none;
+}
+.black_btn:hover {
+  background: #23272b;
+}
+
+.gray_btn {
+  box-shadow: none;
+  background: #e2e2e2;
+  color: #343a40;
+}
+.gray_btn:hover {
+  background: #cac9c9;
 }
 
 .active_btn,
@@ -323,6 +389,9 @@ body.dark {
   display: flex;
   margin-left: 65px;
 }
+.header_hellp-center.no_ml {
+  margin-left: 0;
+}
 .header_color-mode {
   border: 2px solid #e2e2e2;
   border-radius: 16px;
@@ -375,6 +444,13 @@ body.dark {
   align-items: center;
   gap: 10px;
 }
+.header_language-box .eng {
+  display: flex;
+  gap: 10px;
+}
+.header_language-box .option__value .eng {
+  gap: 10px;
+}
 .header_language-box .arrow_down {
   transition: transform 0.3s ease-in-out;
 }
@@ -386,6 +462,11 @@ body.dark {
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+.header .register_btns {
+  display: flex;
+  gap: 23px;
+  margin-right: 43px;
 }
 
 .footer {
@@ -744,8 +825,8 @@ body.dark {
 .discount_card-left .blue_btn {
   margin-top: 37px;
 }
-.discount_card-left .light_img {
-  display: none;
+.discount_card-left img {
+  margin: 0 auto;
 }
 .discount_card-right {
   background: #fff;
@@ -792,6 +873,166 @@ body.dark {
 marquee {
   width: 100%; /* Elementning to'liq ekran eniga moslab o'tishini sozlash */
   margin: auto; /* Elementni o'rtadan joylash */
+}
+
+.balance {
+  margin-bottom: 310px;
+}
+.balance__boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 20px;
+  padding: 37px 29px 37px 36px;
+}
+.balance__box {
+  display: flex;
+  align-items: center;
+}
+.balance__box:last-child {
+  gap: 15px;
+}
+.balance__box p {
+  font-size: 24px;
+  margin: 0 17px 0 13px;
+  font-weight: 900;
+}
+.balance__box .balance__info {
+  font-weight: 400;
+  font-size: 20px;
+  color: #007bff;
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 47px 0 45px 0;
+}
+.search__form {
+  position: relative;
+  max-width: 635px;
+  width: 100%;
+}
+.search__form input {
+  width: 100%;
+  border-radius: 10px;
+  background: #e2e2e2;
+  border: none;
+  padding: 17px 19px;
+  font-size: 17px;
+  color: #53677c;
+}
+.search__form input::placeholder {
+  color: #53677c;
+}
+.search__icon {
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.search .check__box input {
+  display: none;
+}
+.search .check__box input:checked + label .icon__box::after {
+  transform: scale(1) translate(-50%, -50%);
+}
+.search .check__box label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.search .check__box label .icon__box {
+  width: 24px;
+  height: 24px;
+  background: #e2e2e2;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.search .check__box label .icon__box::after {
+  content: "";
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  background-image: url(../../images/icons/tick.svg);
+  width: 10px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: scale(0) translate(-50%, -50%);
+}
+
+.cripto__catalog-header {
+  background: #343a40;
+  border-radius: 10px;
+  padding: 18px 25px;
+}
+.cripto__catalog-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 625px;
+  width: 100%;
+}
+.cripto__catalog-header .left__box {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.cripto__catalog-header .left__box .nft__text {
+  color: #909eac;
+  font-size: 17px;
+}
+.cripto__catalog-header p {
+  font-size: 18px;
+  color: #fff;
+}
+.cripto__catalog-tr {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 12px 0;
+  margin: 0 29px 0 24px;
+}
+.cripto__catalog-tr:first-child {
+  padding-top: 18px;
+}
+.cripto__catalog-tr:last-child {
+  border-bottom: none;
+}
+.cripto__catalog-tr > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 632px;
+  width: 100%;
+  gap: 1rem;
+}
+.cripto__catalog-tr .left__box {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+}
+.cripto__catalog-tr .right__box .cripto__price {
+  color: #53677c;
+}
+.cripto__catalog-tr .cripto__name {
+  font-size: 18px;
+  line-height: 22px;
+}
+.cripto__catalog-tr .cripto__price {
+  font-size: 15px;
+  line-height: 22px;
+}
+.cripto__catalog-tr .cripto__price .cripto__up {
+  color: #28a745;
 }
 
 /*# sourceMappingURL=main.css.map */
