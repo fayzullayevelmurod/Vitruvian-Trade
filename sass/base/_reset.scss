@@ -293,6 +293,32 @@ body {
     .dark_blue-border {
       border-color: #12a1b8 !important;
     }
+    .tariff__table-td.check__td.checked {
+      background: #18222d;
+    }
+    .tariff .check__box {
+      background: #20c997;
+      box-shadow: 0 10px 15px 0 rgba(32, 251, 151, 0.3);
+    }
+    .tariff .check__box.danger {
+      background: #ed3333;
+      box-shadow: 0 10px 15px 0 rgba(237, 51, 51, 0.3);
+    }
+    .tariff .check__input label {
+      background: #18222d;
+    }
+    .tariff__td-bottom {
+      border-color: #1d2936;
+    }
+    .tariff .pending_btn {
+      box-shadow: 0 10px 15px 0 rgba(255, 193, 7, 0.1);
+    }
+    .tariff__table-td.check__td.checked .tariff__td-top::before {
+      background: #12a2b8;
+    }
+    .tariff .check__input input:checked + label {
+      background: #20c997;
+    }
   }
 }
 .wrapper {

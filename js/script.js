@@ -107,14 +107,30 @@ if (accordion) {
 const videoIframe = document.querySelector(".watch__video iframe");
 const playBtn = document.querySelector(".play__btn");
 
-playBtn.addEventListener("click", function () {
-  if (videoIframe.contentWindow) {
-    videoIframe.contentWindow.postMessage(
-      '{"event":"command","func":"playVideo","args":""}',
-      "*"
-    );
-  }
-});
+if (playBtn) {
+  playBtn.addEventListener("click", function () {
+    if (videoIframe.contentWindow) {
+      videoIframe.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        "*"
+      );
+    }
+  });
+}
+
+// tariff
+const labelBox = document.querySelectorAll(".label-box");
+
+if (labelBox) {
+  labelBox.forEach((box, idx) => {
+    box.addEventListener("click", () => {
+      labelBox.forEach((el) => {
+        el.classList.remove("checked");
+      });
+      box.classList.add("checked");
+    });
+  });
+}
 
 // reviews swiper
 try {
