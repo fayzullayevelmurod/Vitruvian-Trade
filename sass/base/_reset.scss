@@ -66,7 +66,10 @@ body {
       background: #121921;
     }
     .dark_blue {
-      color: #12a2b8;
+      color: #12a2b8 !important;
+    }
+    .dark_blue-bg {
+      background: #12a2b8 !important;
     }
     .dark_green {
       color: #1fc896 !important;
@@ -85,7 +88,7 @@ body {
       background-color: #12a2b8;
     }
     .dark_bg {
-      background-color: #1d2936;
+      background-color: #1d2936 !important;
     }
     .tariffs_funds .range_slider-dot.complete {
       background-color: #1d2936;
@@ -224,11 +227,15 @@ body {
     .io .st0,
     .gemini .st0,
     .bite .st2,
-    .minus__icon .st0 {
+    .minus__icon .st0,
+    .lesson-icon .st1 {
       fill: #fff;
     }
     .huobi .st0 {
       fill: #282d5b;
+    }
+    .lesson-icon .st0 {
+      fill: #12a1b8;
     }
     .benefit__card {
       border-color: #2a3c4b;
@@ -241,6 +248,47 @@ body {
     }
     .search__form input {
       color: #fff;
+    }
+    .lesson .progress .progress__box-complate {
+      box-shadow: 0 10px 20px 0 rgba(18, 162, 184, 0.3);
+    }
+    .lesson .progress .progress__box {
+      border-color: #333e5a;
+    }
+    .lesson .lesson__accordion {
+      border-color: #1d2936;
+      background: #1d2936;
+    }
+    .lesson .lesson__accordion .left__box {
+      background: #1d2936;
+    }
+    .lesson .lesson__accordion .right__box {
+      background: #121921;
+    }
+    .lesson .lesson__accordion {
+      transition: all 0.3s linear;
+
+      &:hover {
+        border-color: #12a1b8;
+
+        .lesson__accordion-header-info.nowrap {
+          color: #12a1b8;
+        }
+      }
+      &.active {
+        border-color: #12a1b8;
+
+        .lesson__accordion-header-info.nowrap {
+          color: #12a1b8;
+        }
+      }
+    }
+    .illustration .st0 {
+      fill: #17222c;
+    }
+    .illustration .st2,
+    .illustration .st3 {
+      fill: #12a1b8;
     }
   }
 }

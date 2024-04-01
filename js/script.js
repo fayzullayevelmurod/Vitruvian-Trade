@@ -62,6 +62,60 @@ closeNavBtn.addEventListener("click", () => {
   nav.classList.remove("active");
 });
 
+// accordion
+
+const accordion = document.querySelectorAll(".accordion");
+
+if (accordion) {
+  accordion.forEach((item) => {
+    const accordionHeader = item.querySelector(".accordion__header");
+    const accordionContent = item.querySelector(".accordion__content");
+    accordionHeader.addEventListener("click", () => {
+      const activeItem = document.querySelector(".accordion.active");
+      if (activeItem && activeItem !== item) {
+        activeItem.classList.remove("active");
+        accordionHeader.classList.remove("active");
+      }
+
+      const activeBody = document.querySelector(
+        ".accordion__content:not(.collapsed)"
+      );
+      if (activeBody && activeBody !== accordionContent) {
+        activeBody.classList.add("collapsed");
+        activeBody.style.height = "0";
+      }
+
+      accordionContent.classList.toggle("collapsed");
+      const isCollapsed = accordionContent.classList.contains("collapsed");
+
+      if (isCollapsed) {
+        accordionContent.style.height = "0";
+        item.classList.remove("active");
+        accordionHeader.classList.remove("active");
+      } else if (item.classList.contains("closed__accordion")) {
+        item.classList.remove("active");
+      } else {
+        item.classList.add("active");
+        accordionHeader.classList.add("active");
+        accordionContent.style.height = accordionContent.scrollHeight + "px";
+      }
+    });
+  });
+}
+
+// play video
+const videoIframe = document.querySelector(".watch__video iframe");
+const playBtn = document.querySelector(".play__btn");
+
+playBtn.addEventListener("click", function () {
+  if (videoIframe.contentWindow) {
+    videoIframe.contentWindow.postMessage(
+      '{"event":"command","func":"playVideo","args":""}',
+      "*"
+    );
+  }
+});
+
 // reviews swiper
 try {
   var reviewsSwiper = new Swiper(".reviews-swiper", {
@@ -94,41 +148,4 @@ try {
   });
 } catch (error) {
   throw error;
-}
-
-// accordion
-
-const accordion = document.querySelectorAll(".accordion");
-
-if (accordion) {
-  accordion.forEach((item) => {
-    const accordionHeader = item.querySelector(".accordion__header");
-    const accordionContent = item.querySelector(".accordion__content");
-
-    accordionHeader.addEventListener("click", () => {
-      const activeItem = document.querySelector(".accordion.active");
-      if (activeItem && activeItem !== item) {
-        activeItem.classList.remove("active");
-      }
-
-      const activeBody = document.querySelector(
-        ".accordion__content:not(.collapsed)"
-      );
-      if (activeBody && activeBody !== accordionContent) {
-        activeBody.classList.add("collapsed");
-        activeBody.style.height = "0";
-      }
-
-      accordionContent.classList.toggle("collapsed");
-      const isCollapsed = accordionContent.classList.contains("collapsed");
-
-      if (isCollapsed) {
-        accordionContent.style.height = "0";
-        item.classList.remove("active");
-      } else {
-        item.classList.add("active");
-        accordionContent.style.height = accordionContent.scrollHeight + "px";
-      }
-    });
-  });
 }

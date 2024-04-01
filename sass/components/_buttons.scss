@@ -1,6 +1,7 @@
 .blue_btn,
 .black_btn,
-.gray_btn {
+.gray_btn,
+.yellow__btn {
   background: #007bff;
   padding: 14px 35px;
   color: #fff;
@@ -71,6 +72,15 @@
 
   &:hover {
     background: #e9710e;
+  }
+}
+.yellow__btn {
+  background: #ffc107;
+  color: #121921;
+  box-shadow: 0px 15px 30px 0px rgba(255, 193, 7, 0.15);
+
+  &:hover {
+    background: #e4ad06;
   }
 }
 

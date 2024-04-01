@@ -1,0 +1,363 @@
+.lesson {
+  .progress {
+    margin: 106px 0 92px 0;
+    text-align: center;
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+
+      b {
+        font-weight: 900;
+      }
+      span {
+        color: #007bff;
+        font-weight: 900;
+      }
+    }
+    .progress__box {
+      max-width: 959px;
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      border: 2px solid #cfd0d2;
+      margin: 0 auto;
+      padding: 5px;
+      margin-top: 56px;
+
+      &-complate {
+        background: #007bff;
+        width: 50%;
+        border-radius: 15px;
+        height: 100%;
+        box-shadow: 0 10px 20px 0 rgba(0, 123, 255, 0.3);
+      }
+    }
+  }
+
+  .select__lesson {
+    &-title {
+      margin-bottom: 50px;
+      font-size: 30px;
+      line-height: 48px;
+      font-weight: 900;
+    }
+  }
+  .lesson__accordion {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 17px;
+    position: relative;
+    border: 2px solid transparent;
+
+    &.active {
+      .arrow__down-box img {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.closed__accordion {
+      overflow: visible;
+    }
+
+    &-header {
+      display: flex;
+      align-items: stretch;
+      gap: 1px;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+
+      &.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &-info {
+        font-size: 19px;
+        &.nowrap {
+          white-space: nowrap;
+        }
+      }
+    }
+    .left__box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #e2e2e2;
+      padding: 25px 30px 27px 40px;
+    }
+    .right__box {
+      margin-left: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 25px 27px 25px 25px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .arrow__down-box {
+      width: 32px;
+      height: 32px;
+      background: #e2e2e2;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        transition: all 0.2s linear;
+      }
+    }
+    .closed__btn {
+      background: #ed3333;
+      border-radius: 20px;
+      width: 108px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: center;
+      color: #fff;
+      text-transform: capitalize;
+      font-weight: 300;
+      position: absolute;
+      top: -5px;
+      right: -3px;
+    }
+
+    &-content {
+      background: #fff;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      padding: 0;
+      p {
+        padding: 25px 27px 25px 25px;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .watch__lesson {
+    margin: 60px 0 70px 0;
+
+    &-title {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &-info {
+      margin-top: 27px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .watch__video {
+    margin: 53px auto 0 auto;
+    max-width: 1164px;
+    height: 665px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .play__btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #007bff;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+// consultations
+.consultations {
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-right: 5px;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 94px;
+    position: relative;
+    z-index: 1;
+
+    .left__box {
+      padding: 51px 0 53px 60px;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  &__info {
+    font-size: 19px;
+    line-height: 28px;
+    margin: 30px 0 40px 0;
+  }
+  &__img {
+    width: 384px;
+    height: 388px;
+    transform: translate(-35px, 35px);
+  }
+  .yellow__btn {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+.resources {
+  &__title {
+    font-size: 34px;
+    text-align: center;
+    margin: 90px 0 32px 0;
+  }
+  &__info {
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 1126px;
+    margin: 0 auto 98px auto;
+
+    a {
+      color: #007bff;
+      border-bottom: 1px dotted #007bff;
+    }
+  }
+  .consultations__info {
+    max-width: 781px;
+  }
+  .telegram__img {
+    position: absolute;
+    top: 34%;
+    right: 23%;
+    z-index: -1;
+    width: 105px;
+    height: 75px;
+    filter: blur(3px);
+  }
+  .consultations__img {
+    height: 301px;
+    width: 453px;
+    transform: translateY(20px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.illustration {
+  height: 100%;
+  width: 453px;
+}
+@media screen and (max-width: 1055px) {
+  .resources .consultations__img {
+    position: relative;
+  }
+}
+@media screen and (max-width: 992px) {
+  .lesson .progress {
+    margin: 50px 0;
+  }
+  .lesson .progress .progress__box {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  .lesson .select__lesson-title {
+    margin-bottom: 10px;
+  }
+  .consultations .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .resources .telegram__img {
+    position: absolute;
+    top: 92%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .consultations__title {
+    font-size: 22px;
+  }
+  .consultations__info {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .consultations .container .left__box {
+    padding: 25px;
+  }
+  .lesson .lesson__accordion .right__box,
+  .lesson .lesson__accordion .left__box,
+  .lesson .lesson__accordion-content p {
+    padding: 20px;
+  }
+  .lesson .lesson__accordion-header-info {
+    font-size: 16px;
+  }
+  .lesson .lesson__accordion .left__box {
+    gap: 5px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .lesson .watch__lesson-title {
+    font-size: 22px;
+  }
+  .lesson .watch__lesson-info {
+    font-size: 20px;
+  }
+  .lesson .watch__video {
+    height: 400px;
+  }
+  .lesson .watch__video .play__btn {
+    width: 50px;
+    height: 50px;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  .lesson .lesson__accordion-header {
+    padding: 0;
+  }
+  .lesson .lesson__accordion .arrow__down-box {
+    min-width: 32px;
+  }
+  .lesson .lesson__accordion .right__box {
+    gap: 1rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .lesson .progress__title {
+    font-size: 22px;
+  }
+  .resources .consultations__img {
+    width: 100%;
+  }
+  .consultations__img {
+    transform: translate(0);
+    width: 100%;
+    svg {
+      width: 100%;
+    }
+  }
+}
