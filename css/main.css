@@ -290,6 +290,9 @@ body.dark .illustration .st2,
 body.dark .illustration .st3 {
   fill: #12a1b8;
 }
+body.dark .dark_blue-border {
+  border-color: #12a1b8 !important;
+}
 
 .wrapper {
   overflow: hidden;
