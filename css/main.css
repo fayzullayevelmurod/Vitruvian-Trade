@@ -2306,6 +2306,7 @@ body.dark {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  border-radius: 0;
 }
 .lesson .lesson__accordion-header.active {
   border-bottom-left-radius: 0;
