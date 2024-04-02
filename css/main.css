@@ -2228,6 +2228,9 @@ body.dark {
   gap: 1rem;
   cursor: pointer;
 }
+.lesson .title-box .show__mode-lessons.rotate button svg {
+  transform: rotate(90deg);
+}
 .lesson .title-box button {
   width: 56px;
   height: 36px;

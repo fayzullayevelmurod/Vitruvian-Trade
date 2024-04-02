@@ -71,6 +71,7 @@ if (accordion) {
   accordion.forEach((item, index) => {
     if(showMoreLessons) {
       showMoreLessons.addEventListener("click", () => {
+        showMoreLessons.classList.toggle('rotate')
         if (index !== 0) {
           item.classList.toggle("hide");
         }
