@@ -14,11 +14,15 @@
       align-items: center;
       gap: 1rem;
       cursor: pointer;
-
+      button {
+        svg {
+          transition: all 0.2s linear;
+        }
+      }
       &.rotate {
         button {
           svg {
-            transform: rotate(90deg);
+            transform: rotate(180deg);
           }
         }
       }

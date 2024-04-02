@@ -66,12 +66,15 @@ closeNavBtn.addEventListener("click", () => {
 const showMoreLessons = document.querySelector(".show__mode-lessons");
 
 const accordion = document.querySelectorAll(".accordion");
-
+showMoreLessons.addEventListener("click", () => {
+  showMoreLessons.classList.toggle("rotate");
+});
 if (accordion) {
   accordion.forEach((item, index) => {
-    if(showMoreLessons) {
+    if (showMoreLessons) {
       showMoreLessons.addEventListener("click", () => {
-        showMoreLessons.classList.toggle('rotate')
+        showMoreLessons.classList.toggle("rotate");
+
         if (index !== 0) {
           item.classList.toggle("hide");
         }

@@ -2228,8 +2228,11 @@ body.dark {
   gap: 1rem;
   cursor: pointer;
 }
+.lesson .title-box .show__mode-lessons button svg {
+  transition: all 0.2s linear;
+}
 .lesson .title-box .show__mode-lessons.rotate button svg {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 .lesson .title-box button {
   width: 56px;
