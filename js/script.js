@@ -69,11 +69,13 @@ const accordion = document.querySelectorAll(".accordion");
 
 if (accordion) {
   accordion.forEach((item, index) => {
-    showMoreLessons.addEventListener("click", () => {
-      if (index !== 0) {
-        item.classList.toggle("hide");
-      }
-    });
+    if(showMoreLessons) {
+      showMoreLessons.addEventListener("click", () => {
+        if (index !== 0) {
+          item.classList.toggle("hide");
+        }
+      });
+    }
 
     const accordionHeader = item.querySelector(".accordion__header");
     const accordionContent = item.querySelector(".accordion__content");
