@@ -538,6 +538,9 @@
     }
   }
 }
+.media__table-header {
+  display: none;
+}
 
 @media screen and (max-width: 992px) {
   .register__box {
@@ -553,7 +556,7 @@
     top: 0;
   }
   .tariffs_bitcoin {
-    top: 14%;
+    top: 29%;
     right: 0;
   }
   .main__intro-right .litecoin__img {
@@ -562,9 +565,8 @@
   .main__statistics .container {
     overflow-x: hidden;
   }
-  .main__statistics-table,
-  .main__statistics-header {
-    overflow-x: auto;
+  .main__statistics-table {
+    flex-direction: column;
   }
   .main__statistics-header {
     gap: 25px;
@@ -573,13 +575,17 @@
   .main__statistics-tr {
     padding: 7px 20px 7px 20px;
   }
-  .main__statistics-header .statistics__header-box {
-    min-width: 60%;
-    max-width: 100%;
+  .media__table-header {
+    display: block;
+  }
+  .statistics__header-box.media__none {
+    display: none;
   }
   .main__statistics-box {
-    min-width: 60%;
-    max-width: 60%;
+    max-width: 100%;
+  }
+  .main__statistics-header .statistics__header-box {
+    max-width: 100%;
   }
   .range_btn {
     display: flex;
@@ -794,14 +800,24 @@
   .tariffs {
     margin-bottom: 50px;
   }
+  .main__statistics-header {
+    padding: 15px 20px 15px 20px;
+  }
 }
 
 @media screen and (max-width: 440px) {
-  .tariffs_bitcoin {
-    top: 10%;
-  }
+  // .tariffs_bitcoin {
+  //   top: 10%;
+  // }
   .tariffs_ethereum {
     width: 50px;
     top: 16px;
+  }
+  .main__statistics-header .statistics__header-info img {
+    display: none;
+  }
+  .main__statistics-header .statistics__header-info p,
+  .main__statistics-header .statistics__header-title {
+    font-size: 16px;
   }
 }

@@ -220,10 +220,58 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .tariff__table-td.first {
+    max-width: 330px;
+  }
+  .tariff__td-bottom {
+    height: 275px;
+  }
+  .tariff__table-td.check__td {
+    max-width: 225px;
+    min-width: 225px;
+  }
+  .tariff__table {
+    min-width: fit-content;
+  }
+}
 @media screen and (max-width: 567px) {
   .tariff .tariff__title {
     font-size: 20px;
     margin-top: 50px;
+  }
+  .tariff__td-bottom h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .tariff__td-bottom {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .tariff__table-td.first {
+    max-width: 260px;
+    width: 260px;
+  }
+  .tariff__td-bottom {
+    height: 195px;
+  }
+  .tariff__table-td.check__td {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .tariff__table-td.check__td p {
+    font-size: 16px;
+  }
+  .tariff__td-top h3 {
+    font-size: 17px;
+  }
+  .tariff .gray_btn,
+  .tariff .pending_btn {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .tariff__td-bottom p {
+    font-size: 15px;
   }
   .tariff .title_info {
     font-size: 18px;

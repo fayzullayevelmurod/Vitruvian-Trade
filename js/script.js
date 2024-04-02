@@ -63,11 +63,18 @@ closeNavBtn.addEventListener("click", () => {
 });
 
 // accordion
+const showMoreLessons = document.querySelector(".show__mode-lessons");
 
 const accordion = document.querySelectorAll(".accordion");
 
 if (accordion) {
-  accordion.forEach((item) => {
+  accordion.forEach((item, index) => {
+    showMoreLessons.addEventListener("click", () => {
+      if (index !== 0) {
+        item.classList.toggle("hide");
+      }
+    });
+
     const accordionHeader = item.querySelector(".accordion__header");
     const accordionContent = item.querySelector(".accordion__content");
     accordionHeader.addEventListener("click", () => {

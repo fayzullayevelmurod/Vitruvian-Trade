@@ -430,6 +430,7 @@ body.dark {
   border-radius: 23px;
   transition: background 0.3s ease;
   font-size: 17px;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
   box-shadow: 0px 10px 15px 0px rgba(0, 123, 255, 0.3);
@@ -484,6 +485,7 @@ body.dark {
   background: #28a745;
   color: #fff;
   transition: all 0.3s ease;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 16px;
 }
@@ -706,9 +708,11 @@ body.dark {
   .header_color-mode button {
     height: 100%;
     border-radius: 20px;
+    padding: 0;
   }
   .header_color-mode button img {
     width: 13px;
+    margin: 0 auto;
   }
   .header_right {
     gap: 10px;
@@ -873,6 +877,7 @@ body.dark {
     left: 0;
     padding: 35px 20px 30px 20px !important;
     width: 100%;
+    height: -moz-fit-content;
     height: fit-content;
     background: #fff;
     z-index: 100;
@@ -998,6 +1003,9 @@ body.dark {
 .tariffs {
   margin-bottom: 92px;
 }
+.tariffs .tarif__scroll {
+  min-width: 1240px;
+}
 .tariffs .container {
   position: relative;
 }
@@ -1025,7 +1033,6 @@ body.dark {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 22px;
   margin: 61px 0 42px 0;
 }
@@ -1033,7 +1040,7 @@ body.dark {
   background: #fff;
   border-radius: 20px;
   padding: 42px 25px 32px 25px;
-  flex: 1 1 0%;
+  width: 230px;
   text-align: center;
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
 }
@@ -1060,7 +1067,7 @@ body.dark {
 .tariffs_card-prosent {
   font-weight: 600;
 }
-.tariffs_funds .range_btn {
+.tariffs .range_btn {
   text-align: center;
 }
 .tariffs_funds-number {
@@ -1223,11 +1230,14 @@ body.dark {
   margin-bottom: 18px;
 }
 
-marquee {
-  width: 100%; /* Elementning to'liq ekran eniga moslab o'tishini sozlash */
-  margin: auto; /* Elementni o'rtadan joylash */
+@media screen and (max-width: 1300px) {
+  .tarif__wrap {
+    overflow-x: scroll;
+  }
+  .tarif__wrap::-webkit-scrollbar {
+    display: none;
+  }
 }
-
 .balance {
   margin-bottom: 310px;
 }
@@ -1286,6 +1296,9 @@ marquee {
   border: none;
   padding: 17px 19px;
   font-size: 17px;
+  color: #53677c;
+}
+.search__form input::-moz-placeholder {
   color: #53677c;
 }
 .search__form input::placeholder {
@@ -1363,6 +1376,7 @@ marquee {
   border-bottom: 1px solid #e2e2e2;
   padding: 12px 0;
   margin: 0 29px 0 24px;
+  cursor: pointer;
 }
 .cripto__catalog-tr:first-child {
   padding-top: 18px;
@@ -1612,7 +1626,8 @@ marquee {
 .benefit__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
-  column-gap: 22px;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
   margin-top: 82px;
   row-gap: 49px;
 }
@@ -1624,6 +1639,7 @@ marquee {
 }
 .benefit__card-img {
   background: #f5f5f5;
+  width: -moz-fit-content;
   width: fit-content;
   margin: -15px auto 0 auto;
 }
@@ -1791,7 +1807,8 @@ marquee {
 .interface__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 17px;
   margin: 71px 0 54px 0;
 }
@@ -1917,6 +1934,10 @@ marquee {
   color: #007bff;
 }
 
+.media__table-header {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .register__box {
     margin: 0 auto;
@@ -1931,7 +1952,7 @@ marquee {
     top: 0;
   }
   .tariffs_bitcoin {
-    top: 14%;
+    top: 29%;
     right: 0;
   }
   .main__intro-right .litecoin__img {
@@ -1940,9 +1961,8 @@ marquee {
   .main__statistics .container {
     overflow-x: hidden;
   }
-  .main__statistics-table,
-  .main__statistics-header {
-    overflow-x: auto;
+  .main__statistics-table {
+    flex-direction: column;
   }
   .main__statistics-header {
     gap: 25px;
@@ -1951,13 +1971,17 @@ marquee {
   .main__statistics-tr {
     padding: 7px 20px 7px 20px;
   }
-  .main__statistics-header .statistics__header-box {
-    min-width: 60%;
-    max-width: 100%;
+  .media__table-header {
+    display: block;
+  }
+  .statistics__header-box.media__none {
+    display: none;
   }
   .main__statistics-box {
-    min-width: 60%;
-    max-width: 60%;
+    max-width: 100%;
+  }
+  .main__statistics-header .statistics__header-box {
+    max-width: 100%;
   }
   .range_btn {
     display: flex;
@@ -2171,18 +2195,55 @@ marquee {
   .tariffs {
     margin-bottom: 50px;
   }
+  .main__statistics-header {
+    padding: 15px 20px 15px 20px;
+  }
 }
 @media screen and (max-width: 440px) {
-  .tariffs_bitcoin {
-    top: 10%;
-  }
   .tariffs_ethereum {
     width: 50px;
     top: 16px;
   }
+  .main__statistics-header .statistics__header-info img {
+    display: none;
+  }
+  .main__statistics-header .statistics__header-info p,
+  .main__statistics-header .statistics__header-title {
+    font-size: 16px;
+  }
+}
+.hide {
+  display: none;
+}
+
+.lesson .title-box {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.lesson .title-box .show__mode-lessons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.lesson .title-box button {
+  width: 56px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+.lesson .title-box p {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: capitalize;
 }
 .lesson .progress {
-  margin: 106px 0 92px 0;
+  margin: 40px 0 92px 0;
   text-align: center;
 }
 .lesson .progress__title {
@@ -2214,7 +2275,6 @@ marquee {
   box-shadow: 0 10px 20px 0 rgba(0, 123, 255, 0.3);
 }
 .lesson .select__lesson-title {
-  margin-bottom: 50px;
   font-size: 30px;
   line-height: 48px;
   font-weight: 900;
@@ -2377,6 +2437,7 @@ marquee {
   transform: translate(-35px, 35px);
 }
 .consultations .yellow__btn {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   display: flex;
@@ -2432,7 +2493,7 @@ marquee {
 }
 @media screen and (max-width: 992px) {
   .lesson .progress {
-    margin: 50px 0;
+    margin: 40px 0;
   }
   .lesson .progress .progress__box {
     margin-top: 30px;
@@ -2527,6 +2588,7 @@ marquee {
 }
 .tariff .blue_btn {
   margin: 0 auto;
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   margin-top: 63px;
@@ -2730,10 +2792,59 @@ marquee {
     display: none;
   }
 }
+@media screen and (max-width: 992px) {
+  .tariff__table-td.first {
+    max-width: 330px;
+  }
+  .tariff__td-bottom {
+    height: 275px;
+  }
+  .tariff__table-td.check__td {
+    max-width: 225px;
+    min-width: 225px;
+  }
+  .tariff__table {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+}
 @media screen and (max-width: 567px) {
   .tariff .tariff__title {
     font-size: 20px;
     margin-top: 50px;
+  }
+  .tariff__td-bottom h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .tariff__td-bottom {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .tariff__table-td.first {
+    max-width: 260px;
+    width: 260px;
+  }
+  .tariff__td-bottom {
+    height: 195px;
+  }
+  .tariff__table-td.check__td {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .tariff__table-td.check__td p {
+    font-size: 16px;
+  }
+  .tariff__td-top h3 {
+    font-size: 17px;
+  }
+  .tariff .gray_btn,
+  .tariff .pending_btn {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .tariff__td-bottom p {
+    font-size: 15px;
   }
   .tariff .title_info {
     font-size: 18px;
@@ -2794,6 +2905,4 @@ marquee {
 
 .swiper-slide-active {
   margin-top: 0;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

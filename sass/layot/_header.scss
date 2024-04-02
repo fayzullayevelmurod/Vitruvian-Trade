@@ -190,8 +190,10 @@
   .header_color-mode button {
     height: 100%;
     border-radius: 20px;
+    padding: 0;
     img {
       width: 13px;
+      margin: 0 auto;
     }
   }
   .header_right {
