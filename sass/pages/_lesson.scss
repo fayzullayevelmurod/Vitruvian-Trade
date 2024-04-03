@@ -332,7 +332,12 @@
     right: 0;
   }
 }
-
+// .arrow__down-box svg {
+//   transition: all 0.3s linear;
+// }
+// .lesson .lesson__accordion-header.active .arrow__down-box svg {
+//   transform: rotate(180deg);
+// }
 @media screen and (max-width: 768px) {
   .consultations__title {
     font-size: 22px;
@@ -358,7 +363,7 @@
     row-gap: 10px;
     justify-content: center;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    // border-bottom-left-radius: 20px;
   }
   .lesson .watch__lesson-title {
     font-size: 22px;
@@ -386,7 +391,7 @@
   .lesson .lesson__accordion .right__box {
     gap: 1rem;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    // border-bottom-right-radius: 20px;
   }
 }
 @media screen and (max-width: 576px) {
