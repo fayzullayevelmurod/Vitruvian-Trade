@@ -1,8 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const colorModeBtn = document.querySelector(".color_mode-btn");
-  const parentColorMode = document.querySelector(".header_color-mode");
+  const colorModeBtn = document.querySelectorAll(".color_mode-btn");
+  const parentColorMode = document.querySelectorAll(".header_color-mode");
   const imgElement = document.querySelector(".color_mode-btn img");
-
   const imageSources = ["images/icons/sun.svg", "images/icons/moon.png"];
 
   let currentImageIndex = 0;
@@ -11,7 +10,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     if (isDarkMode) {
       enableDarkMode();
-      colorModeBtn.classList.add("active");
+      colorModeBtn.forEach((btn) => {
+        btn.classList.add("active");
+      });
       imgElement.src = nextImageSource();
     }
   };
@@ -27,11 +28,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   loadDarkMode();
 
-  parentColorMode.addEventListener("click", () => {
-    colorModeBtn.classList.toggle("active");
-    imgElement.src = nextImageSource();
-    document.body.classList.toggle("dark");
-    saveDarkMode();
+  parentColorMode.forEach((item) => {
+    item.addEventListener("click", () => {
+      colorModeBtn.forEach((btn) => {
+        btn.classList.toggle("active");
+      });
+      imgElement.src = nextImageSource();
+      document.body.classList.toggle("dark");
+      saveDarkMode();
+    });
   });
 
   function nextImageSource() {
@@ -52,16 +57,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //  menu
 const openNavBtn = document.querySelector(".open__nav-btn");
-const closeNavBtn = document.querySelector(".close__nav-btn");
+const closeNavBtn = document.querySelectorAll(".close__nav-btn");
 const nav = document.querySelector("header .nav");
-
+const mediaNav = document.querySelector(".media__header");
+console.log(openNavBtn);
 openNavBtn.addEventListener("click", () => {
   nav.classList.add("active");
+  mediaNav.classList.toggle("active");
 });
-closeNavBtn.addEventListener("click", () => {
-  nav.classList.remove("active");
-});
-
+closeNavBtn.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    nav.classList.remove("active");
+    mediaNav.classList.remove("active");
+  })
+);
 // accordion
 const showMoreLessons = document.querySelector(".show__mode-lessons");
 

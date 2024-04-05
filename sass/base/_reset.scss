@@ -105,6 +105,9 @@ body {
     .light_text {
       color: #fff !important;
     }
+    .light_border {
+      border-color: #fff;
+    }
     .nav .nav_link.active,
     .nav .nav_link:hover,
     .up_money-info span {
@@ -240,7 +243,14 @@ body {
     .benefit__card {
       border-color: #2a3c4b;
     }
-
+    @media screen and (max-width: 768px) {
+      .header_color-mode {
+        border-color: #a4a4a6;
+      }
+      .color_mode-btn {
+        background: #a4a4a6;
+      }
+    }
     @media screen and (max-width: 700px) {
       .nav {
         background: #121921;
@@ -318,6 +328,21 @@ body {
     }
     .tariff .check__input input:checked + label {
       background: #20c997;
+    }
+    .illustration-bot .st1 {
+      fill: #42c695;
+    }
+    .illustration-bot .st2 {
+      fill: #131920;
+    }
+    .illustration-bot .st0 {
+      fill: #fff;
+    }
+    .illustration-bot .st5 {
+      fill: #12a2b8;
+    }
+    .illustration-bot .st01 {
+      fill: #253444;
     }
   }
 }

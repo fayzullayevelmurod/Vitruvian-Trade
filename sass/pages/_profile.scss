@@ -1,0 +1,164 @@
+.profile__page {
+  .consultations__img {
+    transform: translate(-15px, 10px);
+  }
+  .resources .consultations__img {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    transform: translate(-126px, 0);
+    height: 95%;
+  }
+  .container .left__box {
+    margin-left: auto;
+    padding: 51px 52px 53px 60px;
+  }
+  .consultations .container {
+    margin-bottom: 50px;
+  }
+  .benefit {
+    &__cards {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    &__card {
+      text-align: left;
+      padding-top: 25px;
+      transition: all 0.2s linear;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background: #f4f4f4;
+        width: 100px;
+        height: 73px;
+        z-index: -1;
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        background: #fff;
+        border-color: #fff;
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+    &__card-img {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 25px;
+      background: transparent;
+    }
+    .statistik__box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .money__statistik {
+      .flex {
+        align-items: center;
+        gap: 16px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 33px;
+      }
+    }
+    &__card-title {
+      font-weight: 900;
+    }
+    &__card-info {
+      font-size: 19px;
+    }
+  }
+}
+
+.latest__blog {
+  .title {
+    font-size: 40px;
+    margin-bottom: 58px;
+  }
+  &-cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &-card {
+    flex: 1 0 0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 295px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .card__content {
+      padding: 22px 22px 30px 22px;
+    }
+    .gray_btn {
+      margin-top: 22px;
+    }
+    &-info {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+  }
+  .other__article-btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 53px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #343a40;
+    .blue_btn {
+      border-radius: 18px;
+      padding: 8px 21px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile__page .container .left__box {
+    padding: 25px;
+  }
+  .profile__page .consultations__img {
+    transform: translate(0, 10px);
+  }
+  .profile__page .resources .consultations__img {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+  }
+  .profile__page .consultations .container {
+    justify-content: initial;
+  }
+  .profile__page .benefit__cards {
+    grid-template-columns: 100%;
+  }
+  .latest__blog {
+    .title {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  }
+  .benefit {
+    margin-bottom: 50px;
+  }
+}

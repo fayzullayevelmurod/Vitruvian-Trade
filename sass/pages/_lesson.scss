@@ -245,11 +245,18 @@
   &__title {
     font-size: 32px;
     font-weight: 900;
+    span {
+      color: #007bff;
+    }
   }
   &__info {
     font-size: 19px;
     line-height: 28px;
     margin: 30px 0 40px 0;
+    span {
+      color: #007bff;
+      font-weight: 900;
+    }
   }
   &__img {
     width: 384px;
@@ -332,12 +339,6 @@
     right: 0;
   }
 }
-// .arrow__down-box svg {
-//   transition: all 0.3s linear;
-// }
-// .lesson .lesson__accordion-header.active .arrow__down-box svg {
-//   transform: rotate(180deg);
-// }
 @media screen and (max-width: 768px) {
   .consultations__title {
     font-size: 22px;

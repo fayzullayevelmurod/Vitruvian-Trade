@@ -27,38 +27,8 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .nav {
-    border: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 35px 20px 30px 20px !important;
-    width: 100%;
-    height: fit-content;
-    background: #fff;
-    z-index: 100;
-    box-shadow: 0px 20px 20px 14px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    transform-origin: top;
-    transform: scaleY(0);
-    &.active {
-      transform: scaleY(1);
-    }
-
-    &_list {
-      flex-direction: column;
-      padding: 0 !important;
-    }
-
-    .close__nav-btn {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-  }
-  .open__nav-btn {
-    display: block;
+    display: none;
   }
 }
