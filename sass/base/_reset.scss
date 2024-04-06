@@ -37,6 +37,7 @@ select:focus {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 input:focus {
@@ -82,6 +83,9 @@ body {
     .light_icon .st1 .light_icon .st0,
     .close__nav-btn svg {
       fill: #fff;
+      stroke: #fff;
+    }
+    .footer__arrow-down path {
       stroke: #fff;
     }
     .blue_btn {
@@ -155,7 +159,7 @@ body {
       background: #162331;
     }
     .up_money .container {
-      background: url(../images/dark_up-money.png) no-repeat;
+      background: url(../images/dark_up-money.webp) no-repeat;
       background-size: contain;
       background-position: top right;
     }
@@ -397,8 +401,30 @@ body {
       background: #243444;
       color: #e9ecef;
     }
+    .replenishment .select__wallet .check_input:checked + .cart__box,
+    .replenishment .select {
+      background: #253444;
+    }
+    .replenishment .select__option {
+      color: #64819f;
+    }
+    .footer .col.coll {
+      border-color: #2a3c4b;
+    }
+    .replenishment
+      .select__wallet
+      .check_input:checked
+      + .cart__box
+      .check__label {
+      background: #1d2936;
+    }
+    .replenishment .select__wallet .cart__box .check__label {
+      background: #253444;
+    }
+    //
   }
 }
+
 .wrapper {
   overflow: hidden;
 }

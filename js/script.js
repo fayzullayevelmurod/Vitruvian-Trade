@@ -167,6 +167,20 @@ if (coureseCheckBox) {
     });
   });
 }
+
+// dropdown footer
+const footerCol = document.querySelectorAll(".footer .coll");
+footerCol.forEach((col) => {
+  const footerHeader = col.querySelector(".col__header");
+  const footerUl = col.querySelector("ul");
+  const footerArrowDown = col.querySelector('.footer__arrow-down');
+
+  footerHeader.addEventListener("click", () => {
+    footerUl.classList.toggle("show");
+    footerArrowDown.classList.toggle('rotate')
+  });
+});
+
 // reviews swiper
 try {
   let swiper = document.querySelector(".reviews-swiper");

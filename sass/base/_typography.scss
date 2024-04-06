@@ -71,7 +71,6 @@ body {
 //   }
 // }
 
-
 @media screen and (max-width: 1300px) {
   .container {
     max-width: 95%;
@@ -94,6 +93,10 @@ body {
   .title__text,
   .title {
     font-size: 25px;
+    font-weight: 700;
+  }
+  .main__intro-title {
+    font-weight: 700;
   }
   .title__info,
   .title_info {

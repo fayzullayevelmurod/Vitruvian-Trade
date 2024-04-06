@@ -39,6 +39,7 @@ select:focus {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 input:focus {
@@ -87,6 +88,9 @@ body.dark .light_icon,
 body.dark .light_icon .st1 .light_icon .st0,
 body.dark .close__nav-btn svg {
   fill: #fff;
+  stroke: #fff;
+}
+body.dark .footer__arrow-down path {
   stroke: #fff;
 }
 body.dark .blue_btn {
@@ -160,7 +164,7 @@ body.dark .footer .social_media a {
   background: #162331;
 }
 body.dark .up_money .container {
-  background: url(../images/dark_up-money.png) no-repeat;
+  background: url(../images/dark_up-money.webp) no-repeat;
   background-size: contain;
   background-position: top right;
 }
@@ -398,6 +402,22 @@ body.dark .connect__page .filter__btns .gray_btn.active {
   background: #243444;
   color: #e9ecef;
 }
+body.dark .replenishment .select__wallet .check_input:checked + .cart__box,
+body.dark .replenishment .select {
+  background: #253444;
+}
+body.dark .replenishment .select__option {
+  color: #64819f;
+}
+body.dark .footer .col.coll {
+  border-color: #2a3c4b;
+}
+body.dark .replenishment .select__wallet .check_input:checked + .cart__box .check__label {
+  background: #1d2936;
+}
+body.dark .replenishment .select__wallet .cart__box .check__label {
+  background: #253444;
+}
 
 .wrapper {
   overflow: hidden;
@@ -492,6 +512,10 @@ body.dark {
   .title__text,
   .title {
     font-size: 25px;
+    font-weight: 700;
+  }
+  .main__intro-title {
+    font-weight: 700;
   }
   .title__info,
   .title_info {
@@ -969,6 +993,58 @@ body.dark {
   background: #f5f5f5;
 }
 
+.footer__arrow-down {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .footer .row {
+    flex-direction: column;
+  }
+  .footer .col:first-child,
+  .footer .col.social_media-box {
+    max-width: 100%;
+  }
+  .footer .col.social_media-box {
+    margin-top: 10px;
+  }
+  .footer .col {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .footer .col.coll {
+    border-bottom: 1px solid #191a1f;
+  }
+  .footer .col h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  .footer .col__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .col .footer__arrow-down {
+    display: block;
+    transition: all 0.3s linear;
+  }
+  .footer .col .footer__arrow-down.rotate {
+    transform: rotate(180deg);
+  }
+  .footer .col ul {
+    max-height: 0;
+  }
+  .footer .col ul li:last-child {
+    padding-bottom: 10px;
+  }
+  .footer .col ul li:first-child {
+    padding-top: 10px;
+  }
+  .footer .col ul.show {
+    max-height: 100%;
+  }
+}
 .faq .accordion {
   border: 2px solid #d1d1d1;
   border-radius: 20px;
@@ -1071,7 +1147,7 @@ body.dark {
   padding: 55px;
   box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   display: flex;
-  background: url(../images/up_money.png) no-repeat #fff;
+  background: url(../images/up_money.webp) no-repeat #fff;
   background-size: contain;
   background-position: top right;
 }
@@ -3529,6 +3605,208 @@ body.dark {
   .connect__page .interface__step-left {
     justify-content: space-between;
     width: 100%;
+  }
+}
+.replenishment .container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+.replenishment .back__box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 28px;
+  font-weight: 900;
+  color: #343a40;
+  margin-bottom: 34px;
+}
+.replenishment .back__box .back__btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0;
+}
+.replenishment .back__box .back__btn svg {
+  transform: rotate(90deg);
+}
+.replenishment .btn__box {
+  margin-left: auto;
+  width: 606px;
+  margin-top: 42px;
+}
+.replenishment .select__wallet {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 40px;
+  justify-content: space-between;
+}
+.replenishment .select__wallet-title {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: normal;
+}
+.replenishment .select__wallet .cart__boxes {
+  max-width: 566px;
+  width: 100%;
+}
+.replenishment .select__wallet .check_input {
+  display: none;
+}
+.replenishment .select__wallet .check_input:checked + .cart__box {
+  background: #f3f3f3;
+}
+.replenishment .select__wallet .check_input:checked + .cart__box .check__label::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.replenishment .select__wallet .cart__box {
+  padding: 13px 26px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.replenishment .select__wallet .cart__box-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+}
+.replenishment .select__wallet .cart__box .check__label {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #e2e2e2;
+  position: relative;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.replenishment .select__wallet .cart__box .check__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 8px;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: all 0.2s linear;
+  background-image: url(../../images/icons/tick.svg);
+}
+.replenishment .select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e1e1e1;
+  border-radius: 10px;
+  padding: 12px 19px;
+  cursor: pointer;
+  max-width: 543px;
+  width: 100%;
+}
+.replenishment .select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 46px;
+  color: #4d6074;
+}
+.replenishment .select__option .valuta__box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.replenishment .select__option .valuta__name {
+  font-size: 18px;
+  line-height: 22px;
+}
+.replenishment .select__option .money {
+  font-size: 17px;
+  line-height: 26px;
+}
+.replenishment .calculate__money {
+  margin: 62px 0 70px 0;
+  text-align: center;
+}
+.replenishment .calculate__money-title {
+  font-size: 26px;
+  font-weight: 300;
+}
+.replenishment .calculate__money-btns {
+  margin-top: 44px;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.replenishment .calculate__money .gray_btn {
+  color: #64819f;
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  justify-content: center;
+  line-height: normal;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .replenishment .container {
+    max-width: 95%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .replenishment .select__wallet {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+  }
+  .replenishment .select__wallet {
+    padding: 20px;
+  }
+  .replenishment .select__wallet .cart__boxes {
+    max-width: 100%;
+  }
+  .replenishment .calculate__money {
+    margin: 50px 0;
+  }
+  .replenishment .btn__box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .replenishment .select {
+    max-width: 100%;
+  }
+  .replenishment .select__option {
+    padding-right: 10px;
+  }
+  .replenishment .select__option .valuta__box {
+    gap: 10px;
+  }
+  .replenishment .select__option .money,
+  .replenishment .select__option .valuta__name {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .replenishment .btn__box .blue_btn {
+    width: 100%;
+  }
+  .replenishment .select__wallet .cart__box-left {
+    font-size: 16px;
+  }
+  .replenishment .select__wallet .cart__box {
+    padding: 13px 15px;
+  }
+  .replenishment .calculate__money {
+    margin: 25px 0;
   }
 }
 .swiper__btns {

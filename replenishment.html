@@ -298,179 +298,90 @@ V400l0,0v66.7C600,485.1,585,500,566.7,500z"></path>
     <!-- main -->
     <main class="main">
 
-      <!-- balance -->
-      <section class="balance">
+      <!-- replenishment -->
+      <section class="replenishment">
         <div class="container">
-          <div class="balance__boxes dark_bg">
-            <div class="balance__box">
-              <img src="images/icons/coins.svg" alt="" width="24" height="21">
-              <p>Общий баланс:</p>
-              <p class="balance__info dark_blue">1 000.00 $</p>
-            </div>
-            <div class="balance__box">
-              <a class="blue_btn flex no_shadow" href="#!">
-                <img src="images/icons/download.png" alt="download" width="16" height="16">
-                <span>Ввод</span>
-              </a>
-              <a class="black_btn flex" href="#!">
-                <img src="images/icons/upload.png" alt="download" width="16" height="16">
-                <span>Вывод</span>
-              </a>
-              <a class="gray_btn flex" href="#!">
-                <?xml version="1.0" encoding="utf-8"?>
-                <!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18" height="18"
-                  viewBox="0 0 101.2 101.2" style="enable-background:new 0 0 101.2 101.2;" xml:space="preserve">
-                  <style type="text/css">
-                    .st0 {
-                      fill: #343A40;
-                    }
-                  </style>
-                  <g>
-                    <path class="st0" d="M50.5,0c-0.9,0-1.7,0-2.6,0.1C22.4,1.4,1.4,22.4,0.1,48c-0.7,14.3,4.7,28.3,14.8,38.4s24.1,15.5,38.4,14.8
-		c25.6-1.3,46.6-22.3,47.9-47.9C101.9,39,96.5,25,86.4,14.9C76.9,5.3,64,0,50.5,0z M50.6,92C27.8,92,9.2,73.4,9.2,50.6
-		S27.8,9.2,50.6,9.2S92,27.8,92,50.6S73.4,92,50.6,92z" />
-                    <path class="st0"
-                      d="M65.9,56.2H26.3l23.9,23.9V65.5H66c2.5,0,4.6-2.1,4.6-4.6S68.5,56.2,65.9,56.2z" />
-                    <path class="st0" d="M51.1,21.2v14.6H35.3c-2.5,0-4.6,2.1-4.6,4.6s2.1,4.6,4.6,4.6H75L51.1,21.2z" />
-                  </g>
-                </svg>
+          <a href="#!" class="back__box light_text">
+            <button class="back__btn gray_btn" aria-label="back btn">
+              <svg class="light_icon" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6" height="10" viewBox="0 0 8 4.8"
+                style="enable-background:new 0 0 8 4.8;" xml:space="preserve">
+                <polygon class="st0" points="4,3.2 0.8,0 0,0.8 4,4.8 8,0.8 7.2,0 " />
+              </svg>
+            </button>
+            <span>Пополнение</span>
+          </a>
 
-                <span>Обмен</span>
-              </a>
+          <div class="select__wallet dark_bg">
+            <h4 class="select__wallet-title">Выберите кошелек для пополнения:</h4>
+            <div class="select">
+              <div class="select__option">
+                <div class="valuta__box">
+                  <img src="images/icons/tehter1.svg" alt="tehter1" width="24" height="24">
+                  <p class="valuta__name">Tether USDT</p>
+                </div>
+                <p class="money">308.68 ≈ 308.23 $</p>
+              </div>
+              <svg class="light_icon arrow_down" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8" height="5" viewBox="0 0 8 4.8"
+                style="enable-background:new 0 0 8 4.8;" xml:space="preserve">
+                <polygon class="st0" points="4,3.2 0.8,0 0,0.8 4,4.8 8,0.8 7.2,0 " />
+              </svg>
+            </div>
+          </div>
+          <div class="calculate__money">
+            <p class="calculate__money-title">0 $</p>
+
+            <div class="calculate__money-btns">
+              <button class="gray_btn" aria-label="price btn">2000$</button>
+              <button class="gray_btn" aria-label="price btn">3000$</button>
+              <button class="gray_btn" aria-label="price btn">4000$</button>
+              <button class="gray_btn" aria-label="price btn">5000$</button>
             </div>
           </div>
 
-          <div class="search">
-            <div class="search__form">
+          <div class="select__wallet dark_bg">
+            <h4 class="select__wallet-title">Выберите способ пополнения:</h4>
+            <div class="cart__boxes">
+              <input checked type="radio" class="check_input" id="cart-one" name="select_cart">
+              <label class="cart__box" for="cart-one">
+                <div class="cart__box-left">
+                  <img src="images/icons/card.svg" alt="" width="26" height="17">
+                  <span>Кредитная карта</span>
+                </div>
+                <label class="check__label" for="cart-one"></label>
+              </label>
+              <input type="radio" class="check_input" id="cart-two" name="select_cart">
+              <label class="cart__box" for="cart-two">
+                <div fill="#232323" class="cart__box-left">
+                  <svg class="light_icon" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26" height="24"
+                    viewBox="0 0 683.3 800" style="enable-background:new 0 0 683.3 800;" xml:space="preserve">
+                    <title>Apple-color</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Icons">
+                      <g id="Color-" transform="translate(-204.000000, -560.000000)">
+                        <path id="Apple" class="st0" d="M656.9,689.9c26.1-33.7,45.9-81.3,38.7-129.9c-42.6,3-92.5,30.2-121.6,65.8
+			c-26.5,32.2-48.3,80.2-39.8,126.7C580.9,753.9,629,726,656.9,689.9L656.9,689.9z M887.3,1147c-18.7,41.6-27.6,60.2-51.7,97
+			c-33.5,51.4-80.8,115.4-139.4,115.9c-52,0.6-65.5-34.1-136.1-33.7c-70.7,0.4-85.4,34.3-137.5,33.8
+			c-58.6-0.5-103.4-58.3-136.9-109.7c-93.8-143.7-103.7-312.3-45.8-402c41.1-63.7,106-100.9,167-100.9c62,0,101.1,34.2,152.5,34.2
+			c49.8,0,80.2-34.3,152-34.3c54.3,0,111.9,29.8,152.9,81.1C729.9,902.4,751.6,1095.4,887.3,1147L887.3,1147z" />
+                      </g>
+                    </g>
+                  </svg>
 
-              <input class="dark_bg" type="search" placeholder="Найти токен">
-              <svg fill="#343A40" class="light_icon search__icon" version="1.1" id="Слой_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18"
-                height="18" viewBox="0 0 101.2 101.2" style="enable-background:new 0 0 101.2 101.2;"
-                xml:space="preserve">
-                <style type="text/css">
-                  .st0 {
-                    fill: #343A40;
-                  }
-
-                  body.dark .st0 {
-                    fill: #fff;
-                  }
-                </style>
-                <path class="st0"
-                  d="M99.7,92.6l-23-22.9c6-7.6,9.3-16.9,9.3-26.7c0-11.5-4.5-22.3-12.6-30.4S54.5,0,43,0S20.7,4.5,12.6,12.6
-	S0,31.5,0,43s4.5,22.3,12.6,30.4C20.7,81.6,31.5,86,43,86c9.8,0,19-3.2,26.6-9.2l23,22.9c1,1,2.3,1.5,3.6,1.5c1.3,0,2.6-0.5,3.6-1.5
-	C101.7,97.8,101.7,94.6,99.7,92.6z M43,75.9c-18.1,0-32.9-14.8-32.9-32.9S24.9,10.1,43,10.1S75.9,24.9,75.9,43S61.2,75.9,43,75.9z" />
-              </svg>
-
-
-            </div>
-            <div class="check__box">
-              <input type="checkbox" id="search__check" checked>
-              <label for="search__check">
-                <div class="icon__box"></div>
-                Скрыть активы менее 1 USD
+                  <span>Кредитная карта</span>
+                </div>
+                <label class="check__label" for="cart-two"></label>
               </label>
             </div>
           </div>
-
-          <div class="cripto__catalog">
-            <div class="cripto__catalog-header">
-              <div>
-                <div class="left__box">
-                  <p>Криптовалюта</p>
-                  <p class="nft__text">NFT</p>
-                </div>
-                <p>
-                  Цена
-                </p>
-              </div>
-            </div>
-            <div class="cripto__catalog-table">
-              <div class="cripto__catalog-tr dark_border-two">
-                <div>
-                  <div class="left__box">
-                    <img src="images/icons/btc.svg" alt="btc" width="24" height="25">
-                    <div>
-                      <p class="cripto__name">BTC</p>
-                      <p class="cripto__price">44 053,73 $ <span class="cripto__up dark_green">+ 1.26%</span></p>
-                    </div>
-                  </div>
-                  <div class="right__box">
-                    <p class="cripto__name">99,57</p>
-                    <p class="cripto__price">9.79 $</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cripto__catalog-tr dark_border-two">
-                <div>
-                  <div class="left__box">
-                    <img src="images/icons/bnb.svg" alt="btc" width="24" height="24">
-                    <div>
-                      <p class="cripto__name">BNB</p>
-                      <p class="cripto__price">44 053,73 $ <span class="cripto__up dark_green">+ 1.26%</span></p>
-                    </div>
-                  </div>
-                  <div class="right__box">
-                    <p class="cripto__name">99,57</p>
-                    <p class="cripto__price">9.79 $</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cripto__catalog-tr dark_border-two">
-                <div>
-                  <div class="left__box">
-                    <img src="images/icons/usdt.svg" alt="btc" width="24" height="25">
-                    <div>
-                      <p class="cripto__name">Tether USDT</p>
-                      <p class="cripto__price">44 053,73 $ <span class="cripto__up dark_green">+ 1.26%</span></p>
-                    </div>
-                  </div>
-                  <div class="right__box">
-                    <p class="cripto__name">99,57</p>
-                    <p class="cripto__price">9.79 $</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cripto__catalog-tr dark_border-two">
-                <div>
-                  <div class="left__box">
-                    <img src="images/icons/ethereum.svg" alt="btc" width="24" height="25">
-                    <div>
-                      <p class="cripto__name">Ethereum</p>
-                      <p class="cripto__price">44 053,73 $ <span class="cripto__up dark_green">+ 1.26%</span></p>
-                    </div>
-                  </div>
-                  <div class="right__box">
-                    <p class="cripto__name">99,57</p>
-                    <p class="cripto__price">9.79 $</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cripto__catalog-tr dark_border-two">
-                <div>
-                  <div class="left__box">
-                    <img src="images/icons/Litecoin.svg" alt="btc" width="24" height="25">
-                    <div>
-                      <p class="cripto__name">Litecoin</p>
-                      <p class="cripto__price">44 053,73 $ <span class="cripto__up dark_green">+ 1.26%</span></p>
-                    </div>
-                  </div>
-                  <div class="right__box">
-                    <p class="cripto__name">99,57</p>
-                    <p class="cripto__price">9.79 $</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="btn__box">
+            <a class="blue_btn" href="#!">Пополнить</a>
           </div>
         </div>
       </section>
-
     </main>
-
 
     <!-- footer -->
     <footer class="footer">
