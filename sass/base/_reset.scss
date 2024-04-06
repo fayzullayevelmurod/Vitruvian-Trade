@@ -344,6 +344,18 @@ body {
     .illustration-bot .st01 {
       fill: #253444;
     }
+    .profile__page .benefit__card::before {
+      background: #121921;
+    }
+    .profile__page .benefit__card:hover {
+      background: #1d2936;
+    }
+    .activation__course-check-box.checked {
+      background: #1d2936;
+    }
+    .activation__course .check__label {
+      background: #18222d;
+    }
   }
 }
 .wrapper {

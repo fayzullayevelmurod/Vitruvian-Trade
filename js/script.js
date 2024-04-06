@@ -60,7 +60,7 @@ const openNavBtn = document.querySelector(".open__nav-btn");
 const closeNavBtn = document.querySelectorAll(".close__nav-btn");
 const nav = document.querySelector("header .nav");
 const mediaNav = document.querySelector(".media__header");
-console.log(openNavBtn);
+
 openNavBtn.addEventListener("click", () => {
   nav.classList.add("active");
   mediaNav.classList.toggle("active");
@@ -155,37 +155,51 @@ if (labelBox) {
     });
   });
 }
-
+// courese check box
+const coureseCheckBox = document.querySelectorAll(
+  ".activation__course-check-box"
+);
+if (coureseCheckBox) {
+  coureseCheckBox.forEach((item) => {
+    item.addEventListener("click", () => {
+      coureseCheckBox.forEach((el) => el.classList.remove("checked"));
+      item.classList.add("checked");
+    });
+  });
+}
 // reviews swiper
 try {
-  var reviewsSwiper = new Swiper(".reviews-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    speed: 500,
-    centeredSlides: true,
-    initialSlide: 3,
-    watchOverflow: true,
-    centeredSlides: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-btn-next",
-      prevEl: ".swiper-btn-prev",
-    },
-    breakpoints: {
-      1060: {
-        slidesPerView: 3,
+  let swiper = document.querySelector(".reviews-swiper");
+  if (swiper) {
+    var reviewsSwiper = new Swiper(".reviews-swiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      speed: 500,
+      centeredSlides: true,
+      initialSlide: 3,
+      watchOverflow: true,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-btn-next",
+        prevEl: ".swiper-btn-prev",
       },
-      768: {
-        slidesPerView: 2,
+      breakpoints: {
+        1060: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        460: {
+          slidesPerView: 1.3,
+        },
+        0: {
+          slidesPerView: 1,
+        },
       },
-      460: {
-        slidesPerView: 1.3,
-      },
-      0: {
-        slidesPerView: 1,
-      },
-    },
-  });
+    });
+  }
 } catch (error) {
   throw error;
 }

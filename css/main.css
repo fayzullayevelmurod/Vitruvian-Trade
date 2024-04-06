@@ -345,6 +345,18 @@ body.dark .illustration-bot .st5 {
 body.dark .illustration-bot .st01 {
   fill: #253444;
 }
+body.dark .profile__page .benefit__card::before {
+  background: #121921;
+}
+body.dark .profile__page .benefit__card:hover {
+  background: #1d2936;
+}
+body.dark .activation__course-check-box.checked {
+  background: #1d2936;
+}
+body.dark .activation__course .check__label {
+  background: #18222d;
+}
 
 .wrapper {
   overflow: hidden;
@@ -449,7 +461,8 @@ body.dark {
 .blue_btn,
 .black_btn,
 .gray_btn,
-.yellow__btn {
+.yellow__btn,
+.teal_btn {
   background: #007bff;
   padding: 14px 35px;
   color: #fff;
@@ -463,19 +476,22 @@ body.dark {
 .blue_btn.no_shadow,
 .black_btn.no_shadow,
 .gray_btn.no_shadow,
-.yellow__btn.no_shadow {
+.yellow__btn.no_shadow,
+.teal_btn.no_shadow {
   box-shadow: none;
 }
 .blue_btn:hover,
 .black_btn:hover,
 .gray_btn:hover,
-.yellow__btn:hover {
+.yellow__btn:hover,
+.teal_btn:hover {
   background: #046ee0;
 }
 .blue_btn.flex,
 .black_btn.flex,
 .gray_btn.flex,
-.yellow__btn.flex {
+.yellow__btn.flex,
+.teal_btn.flex {
   display: flex;
   align-items: center;
   gap: 13px;
@@ -497,6 +513,14 @@ body.dark {
 .gray_btn:hover {
   background: #d1d1d1;
   color: #101010;
+}
+
+.teal_btn {
+  background: #12a2b8;
+  box-shadow: 0px 10px 15px 0px rgba(50, 162, 183, 0.2);
+}
+.teal_btn:hover {
+  background: #0b899c;
 }
 
 .active_btn,
@@ -736,9 +760,9 @@ body.dark {
     height: 100vh;
     background: #fff;
     z-index: 999;
-    box-shadow: 0px -32px 45px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.3);
     padding: 30px 15px;
-    transform: translateX(100%);
+    transform: translateX(150%);
     transition: all 0.3s ease;
   }
   .media__header.active {
@@ -792,7 +816,7 @@ body.dark {
     height: fit-content;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
-    transform: translateX(0) translateY(100%);
+    transform: translateX(0) translateY(150%);
   }
   .media__header-line {
     width: 138px;
@@ -3018,7 +3042,7 @@ body.dark {
   align-items: center;
   gap: 24px;
   margin-bottom: 25px;
-  background: transparent;
+  background: transparent !important;
 }
 .profile__page .benefit .statistik__box {
   display: flex;
@@ -3117,6 +3141,178 @@ body.dark {
   }
   .benefit {
     margin-bottom: 50px;
+  }
+}
+.activate__course-page .title__text {
+  font-size: 34px;
+  line-height: 28px;
+}
+.activate__course-page .benefit .teal_btn {
+  margin: 60px auto 0 auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.activate__course-page .benefit__card-title {
+  font-size: 22px;
+}
+
+.activation__course .blue_btn {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.activation__course .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+.activation__course-box {
+  max-width: 713px;
+  width: 100%;
+}
+.activation__course-title {
+  font-size: 34px;
+  font-weight: 900;
+}
+.activation__course-info {
+  font-size: 19px;
+  line-height: 26px;
+  margin: 34px 0 37px 0;
+}
+.activation__course-info span {
+  font-weight: 900;
+}
+.activation__course-title-sm {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 900;
+  margin: 37px 0 34px 0;
+}
+.activation__course .check__box-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.activation__course-check-box {
+  padding: 20px 40px 35px 31px;
+  border-radius: 13px;
+  cursor: pointer;
+  z-index: 2;
+}
+.activation__course-check-box.checked {
+  background: #fff;
+}
+.activation__course-check-box.checked .check__label::before {
+  transform: scale(1) translate(-50%, -50%);
+}
+.activation__course-check-box.checked .green__btn {
+  display: flex;
+}
+.activation__course .check__box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+  height: 40px;
+}
+.activation__course .check__input {
+  display: none;
+}
+.activation__course .check__label {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #e8e8e8;
+  cursor: pointer;
+  z-index: -1;
+}
+.activation__course .check__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: url(../images/icons/tick.svg) no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 8px;
+  transform-origin: center;
+}
+.activation__course .check__box-title {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 32px 0 15px;
+}
+.activation__course .check__box-desc {
+  font-display: 18px;
+  line-height: 26px;
+}
+.activation__course .check__box-desc span {
+  color: #007aff;
+  font-weight: 900;
+}
+.activation__course .green__btn {
+  padding: 10px 22px;
+  border-radius: 19px;
+  background: #37a744;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: none;
+}
+.activation__course .bonus__box {
+  background: #e9e9e9;
+  border-radius: 20px;
+  padding-top: 36px;
+  text-align: center;
+  max-width: 360px;
+}
+.activation__course .bonus__box-content {
+  padding: 0 30px;
+  margin-bottom: 66px;
+}
+.activation__course .bonus__box-desc {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 23px;
+}
+.activation__course .bonus__box-desc span {
+  color: #007aff;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1145px) {
+  .activation__course-box {
+    max-width: 100%;
+  }
+  .activation__course .bonus__box {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 630px) {
+  .activation__course .check__box-header {
+    flex-wrap: wrap;
+    gap: 16px;
+    height: fit-content;
+  }
+  .activation__course .check__box-title {
+    margin: 0;
+    font-size: 20px;
+  }
+  .activation__course-check-box.checked .green__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .activate__course-page .benefit {
+    margin-top: 50px;
+  }
+  .activation__course-check-box {
+    padding: 20px;
   }
 }
 .swiper__btns {

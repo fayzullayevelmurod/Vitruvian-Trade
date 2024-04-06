@@ -57,6 +57,21 @@ body {
   line-height: 30px;
 }
 
+// checkbox
+// .check__label {
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+
 @media screen and (max-width: 1300px) {
   .container {
     max-width: 95%;

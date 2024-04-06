@@ -1,0 +1,181 @@
+.activate__course-page {
+  .title__text {
+    font-size: 34px;
+    line-height: 28px;
+  }
+  .benefit {
+    .teal_btn {
+      margin: 60px auto 0 auto;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .benefit__card-title {
+    font-size: 22px;
+  }
+}
+.activation__course {
+  .blue_btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+  &-box {
+    max-width: 713px;
+    width: 100%;
+  }
+  &-title {
+    font-size: 34px;
+    font-weight: 900;
+  }
+  &-info {
+    font-size: 19px;
+    line-height: 26px;
+    margin: 34px 0 37px 0;
+
+    span {
+      font-weight: 900;
+    }
+  }
+  &-title-sm {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 900;
+    margin: 37px 0 34px 0;
+  }
+  .check__box-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-check-box {
+    padding: 20px 40px 35px 31px;
+    border-radius: 13px;
+    cursor: pointer;
+    z-index: 2;
+
+    &.checked {
+      background: #fff;
+      .check__label::before {
+        transform: scale(1) translate(-50%, -50%);
+      }
+      .green__btn {
+        display: flex;
+      }
+    }
+  }
+  .check__box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;
+    height: 40px;
+  }
+  .check__input {
+    display: none;
+  }
+  .check__label {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: #e8e8e8;
+    cursor: pointer;
+    z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: url(../images/icons/tick.svg) no-repeat;
+      background-size: cover;
+      width: 10px;
+      height: 8px;
+      transform-origin: center;
+    }
+  }
+  .check__box-title {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 32px 0 15px;
+  }
+  .check__box-desc {
+    font-display: 18px;
+    line-height: 26px;
+    span {
+      color: #007aff;
+      font-weight: 900;
+    }
+  }
+  .green__btn {
+    padding: 10px 22px;
+    border-radius: 19px;
+    background: #37a744;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    display: none;
+  }
+  .bonus__box {
+    background: #e9e9e9;
+    border-radius: 20px;
+    padding-top: 36px;
+    text-align: center;
+    max-width: 360px;
+    &-content {
+      padding: 0 30px;
+      margin-bottom: 66px;
+    }
+    &-desc {
+      font-size: 18px;
+      line-height: 28px;
+      margin-top: 23px;
+
+      span {
+        color: #007aff;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .activation__course-box {
+    max-width: 100%;
+  }
+  .activation__course .bonus__box {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .activation__course .check__box-header {
+    flex-wrap: wrap;
+    gap: 16px;
+    height: fit-content;
+  }
+  .activation__course .check__box-title {
+    margin: 0;
+    font-size: 20px;
+  }
+  .activation__course-check-box.checked .green__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .activate__course-page .benefit {
+    margin-top: 50px;
+  }
+  .activation__course-check-box {
+    padding: 20px;
+  }
+}
