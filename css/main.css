@@ -357,6 +357,47 @@ body.dark .activation__course-check-box.checked {
 body.dark .activation__course .check__label {
   background: #18222d;
 }
+body.dark .illustration-money .st5 {
+  fill: #243444;
+}
+body.dark .illustration-money .st6 {
+  fill: #1b2632;
+}
+body.dark .illustration-money .st1 {
+  fill: #6bf7c8;
+}
+body.dark .illustration-money .st2 {
+  fill: #1fc896;
+}
+body.dark .illustration-money .st10 {
+  fill: #12a1b8;
+}
+body.dark .ftx .st0,
+body.dark .bitrex .st0,
+body.dark .xuobi .st0,
+body.dark .ftx-us .st4 {
+  fill: #fff;
+}
+body.dark .discount_card-left .st1 {
+  fill: #fff;
+}
+body.dark .connect__page .interface__step .filter__label::after {
+  background: rgb(18, 162, 184);
+  box-shadow: 0 8px 10px 0 rgba(18, 162, 184, 0.5);
+}
+body.dark .connect__page .interface__step .filter__label {
+  background: #1d2936;
+}
+body.dark .connect__page .interface__step .filter__label::before {
+  border-color: #12a1b8;
+}
+body.dark .connect__page .filter__btns .gray_btn {
+  color: #8b9caf;
+}
+body.dark .connect__page .filter__btns .gray_btn.active {
+  background: #243444;
+  color: #e9ecef;
+}
 
 .wrapper {
   overflow: hidden;
@@ -825,7 +866,7 @@ body.dark {
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
-    border: 6px solid #000;
+    border: 6px solid #d1d1d1;
   }
   .media__header.active {
     transform: translateY(0);
@@ -1272,7 +1313,7 @@ body.dark {
   background: #e9e9e9;
   border-radius: 20px;
   display: flex;
-  align-items: start;
+  align-items: stretch;
   position: relative;
   border: 1px solid transparent;
 }
@@ -1301,7 +1342,7 @@ body.dark {
   width: 100%;
 }
 .discount_card-left .blue_btn {
-  margin-top: 37px;
+  margin: 37px auto 0 auto;
 }
 .discount_card-left img {
   margin: 0 auto;
@@ -1354,6 +1395,51 @@ body.dark {
   }
   .tarif__wrap::-webkit-scrollbar {
     display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .discount_card {
+    flex-direction: column;
+  }
+  .discount_card-right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    padding: 24px;
+  }
+  .discount_card-left {
+    max-width: 100%;
+    padding: 24px;
+    text-align: left;
+  }
+  .discount_card-left img,
+  .discount_card-left .blue_btn {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 567px) {
+  .discount_card-right {
+    flex-direction: column;
+  }
+  .discount_card-right .discount_card-box {
+    gap: 20px;
+  }
+  .discount_card-right .discount_card-box:last-child {
+    margin-top: 20px;
+  }
+  .discount_card .refback_box {
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -13px;
+  }
+  .discount_card .refback_box p {
+    line-height: normal;
+  }
+  .connect__page .discount .title {
+    font-size: 25px !important;
+    line-height: 30px !important;
   }
 }
 .balance {
@@ -3313,6 +3399,136 @@ body.dark {
   }
   .activation__course-check-box {
     padding: 20px;
+  }
+}
+.connect__page .title__text {
+  font-size: 30px;
+}
+.connect__page .filter__btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 37px 0;
+}
+.connect__page .filter__btns .gray_btn {
+  border-radius: 10px;
+  color: #53677c;
+  font-weight: normal;
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.connect__page .filter__btns .gray_btn.active {
+  background: #d1d1d1;
+  color: #343a40;
+}
+.connect__page .discount .title {
+  font-size: 30px;
+  margin-bottom: 52px;
+  line-height: 40px;
+}
+.connect__page .interface__cards {
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  max-width: 880px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin: 0 auto 55px auto;
+}
+.connect__page .interface {
+  margin-top: 35px;
+}
+.connect__page .interface__step {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1030px;
+  margin: 0 auto 50px auto;
+}
+.connect__page .interface__step-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.connect__page .interface__step .filter__input {
+  display: none;
+}
+.connect__page .interface__step .filter__input:checked + .filter__label {
+  background: transparent;
+}
+.connect__page .interface__step .filter__input:checked + .filter__label::before {
+  transform: scale(1);
+}
+.connect__page .interface__step .filter__input:checked + .filter__label::after {
+  transform: scale(1) translate(-50%, -50%);
+}
+.connect__page .interface__step .filter__inputs {
+  display: flex;
+  gap: 10px;
+}
+.connect__page .interface__step .filter__label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #e2e2e2;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.connect__page .interface__step .filter__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #067eff;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  transform-origin: center;
+  transform: scale(0);
+}
+.connect__page .interface__step .filter__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 8px;
+  background: rgb(6, 126, 255);
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  transform-origin: center;
+  box-shadow: 0 8px 10px 0 rgba(6, 126, 255, 0.5);
+}
+.connect__page .interface__step .blue_btn {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .connect__page .title__text {
+    font-size: 25px;
+  }
+  .connect__page .filter__btns {
+    gap: 1rem;
+  }
+  .connect__page .filter__btns .gray_btn {
+    flex: 1 1 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .connect__page .interface__step .blue_btn {
+    width: 100%;
+  }
+  .connect__page .interface__step-left {
+    justify-content: space-between;
+    width: 100%;
   }
 }
 .swiper__btns {

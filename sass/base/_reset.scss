@@ -356,6 +356,47 @@ body {
     .activation__course .check__label {
       background: #18222d;
     }
+    .illustration-money .st5 {
+      fill: #243444;
+    }
+    .illustration-money .st6 {
+      fill: #1b2632;
+    }
+    .illustration-money .st1 {
+      fill: #6bf7c8;
+    }
+    .illustration-money .st2 {
+      fill: #1fc896;
+    }
+    .illustration-money .st10 {
+      fill: #12a1b8;
+    }
+    .ftx .st0,
+    .bitrex .st0,
+    .xuobi .st0,
+    .ftx-us .st4 {
+      fill: #fff;
+    }
+    .discount_card-left .st1 {
+      fill: #fff;
+    }
+    .connect__page .interface__step .filter__label::after {
+      background: rgb(18, 162, 184);
+      box-shadow: 0 8px 10px 0 rgb(18, 162, 184, 0.5);
+    }
+    .connect__page .interface__step .filter__label {
+      background: #1d2936;
+    }
+    .connect__page .interface__step .filter__label::before {
+      border-color: #12a1b8;
+    }
+    .connect__page .filter__btns .gray_btn {
+      color: #8b9caf;
+    }
+    .connect__page .filter__btns .gray_btn.active {
+      background: #243444;
+      color: #e9ecef;
+    }
   }
 }
 .wrapper {
