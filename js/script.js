@@ -194,11 +194,7 @@ try {
       });
       tabHeaderItems.forEach((item) => item.classList.remove("checked"));
     }
-    // function showTabContent(idx = 1) {
-    //   tabContents[idx].classList.remove("hide");
-    //   tabContents[idx].classList.add("show");
-    //   tabHeaderItems[idx].classList.add("checked");
-    // }
+
     function showTabContent(idx = 1) {
       tabContents.forEach((content, index) => {
         content.classList.remove("show");
