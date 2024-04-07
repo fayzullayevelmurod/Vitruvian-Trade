@@ -1,4 +1,15 @@
 .connect__page {
+  .interface {
+    .container {
+      max-width: 1030px;
+    }
+    .title__info {
+      margin-bottom: 40px;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
   .title__text {
     font-size: 30px;
   }
@@ -27,6 +38,9 @@
       margin-bottom: 52px;
       line-height: 40px;
     }
+    .blue_btn {
+      margin: 37px auto 0 auto;
+    }
   }
   .interface__cards {
     grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
@@ -39,6 +53,29 @@
   }
   .interface {
     margin-top: 35px;
+
+    .tab__content {
+      animation: fade 0.3s ease;
+      &.hide {
+        display: none;
+      }
+      &.show {
+        display: block;
+      }
+
+      .discount {
+        margin-top: 70px;
+      }
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
   .interface__step {
     display: flex;
@@ -55,18 +92,6 @@
       align-items: center;
       gap: 30px;
     }
-    .filter__input {
-      display: none;
-      &:checked + .filter__label {
-        background: transparent;
-        &::before {
-          transform: scale(1);
-        }
-        &::after {
-          transform: scale(1) translate(-50%, -50%);
-        }
-      }
-    }
     .filter__inputs {
       display: flex;
       gap: 10px;
@@ -79,6 +104,16 @@
       display: block;
       border-radius: 50%;
       cursor: pointer;
+
+      &.checked {
+        background: transparent;
+        &::before {
+          transform: scale(1);
+        }
+        &::after {
+          transform: scale(1) translate(-50%, -50%);
+        }
+      }
 
       &::before {
         content: "";
@@ -113,6 +148,221 @@
       margin: 0;
     }
   }
+  .tick__check-boxes {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 38px;
+    .tick__check-box {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+
+      &:first-child {
+        gap: 27px;
+      }
+    }
+    .tick__check-input {
+      display: none;
+      &:disabled {
+        + .tick__info {
+          .tick__check-label {
+            &::after {
+              background-image: url(../../images/icons/Tick\ 2.svg);
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+      &:checked {
+        + .tick__info {
+          .tick__check-label {
+            &::after {
+              transform: scale(1) translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+    .edit {
+      font-size: 17px;
+      color: #53677c;
+      cursor: pointer;
+    }
+    .tick__info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+
+      p {
+        font-size: 17px;
+        white-space: nowrap;
+      }
+    }
+
+    .tick__check-label {
+      position: relative;
+      font-size: 17px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      border-radius: 4px;
+      background: #e2e2e2;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.3s linear;
+        transform-origin: center;
+        transform: scale(0) translate(-50%, -50%);
+        width: 10px;
+        height: 8px;
+        background: url(../../images/icons/tick.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .content__title {
+    font-size: 20px;
+    line-height: 28px;
+    color: #007bff;
+    margin-bottom: 38px;
+  }
+  .lesson__title {
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  .lesson__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 38px;
+    margin-top: 19px;
+  }
+  .lesson__video {
+    max-width: 394px;
+    width: 100%;
+    height: 265px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-description {
+      color: #e9ecef;
+      width: 100%;
+      padding: 17px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #343a40;
+      z-index: 1;
+    }
+  }
+  .lesson__form {
+    margin: 59px 0 44px 0;
+    max-width: 579px;
+    .content__title {
+      margin-bottom: 26px;
+    }
+    &-input {
+      margin-bottom: 15px;
+      background: #e2e2e2;
+      border-radius: 10px;
+      padding: 0 19px;
+      height: 44px;
+      line-height: 44px;
+      color: #53677c;
+      font-size: 17px;
+      border: none;
+      width: 100%;
+    }
+  }
+  .activation__course {
+    .container {
+      flex-wrap: nowrap;
+      gap: 60px;
+      max-width: 1100px;
+      width: 1100px;
+      margin-left: -30px;
+    }
+    .check__box-title {
+      margin-right: 16px;
+    }
+    &-box {
+      max-width: 680px;
+    }
+    &-check-box {
+      padding: 26px 26px 33px 26px;
+
+      &.checked {
+        box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+    &-title {
+      font-size: 30px;
+    }
+    &-title,
+    &-title-sm,
+    &-info {
+      margin-left: 30px;
+    }
+    .green__btn {
+      white-space: nowrap;
+      &.orange {
+        margin-left: 15px;
+        background: #fd7e14;
+      }
+    }
+  }
+}
+
+// media query start
+@media screen and (max-width: 1155px) {
+  .connect__page .interface .container {
+    max-width: 95%;
+  }
+  .connect__page .activation__course .container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .connect__page .activation__course-box {
+    max-width: 100%;
+  }
+  .connect__page .activation__course-title,
+  .connect__page .activation__course-title-sm,
+  .connect__page .activation__course-info {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .connect__page .discount .blue_btn {
+    margin-left: 0;
+  }
+  .connect__page .lesson__boxes {
+    flex-direction: column;
+  }
+  .connect__page .tick__check-boxes {
+    width: 100%;
+  }
+
+  .connect__page .lesson__video {
+    max-width: 100%;
+    height: 400px;
+  }
 }
 @media screen and (max-width: 768px) {
   .connect__page .title__text {
@@ -125,13 +375,35 @@
       flex: 1 1 0;
     }
   }
+  .connect__page .tick__check-boxes .tick__check-box:first-child {
+    gap: 17px;
+  }
+  .connect__page .tick__check-boxes {
+    flex-wrap: wrap;
+    row-gap: 17px;
+  }
+  .connect__page .tick__check-boxes .tick__info p {
+    br {
+      display: none;
+    }
+    word-wrap: break-word;
+    white-space: initial;
+  }
 }
-
+@media screen and (max-width: 630px) {
+  .connect__page .activation__course .green__btn.orange {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 460px) {
   .connect__page .interface__step .blue_btn {
     width: 100%;
   }
   .connect__page .interface__step-left {
-    justify-content: space-between;width: 100%;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .connect__page .discount .blue_btn {
+    width: 100%;
   }
 }

@@ -388,7 +388,8 @@ body {
       background: rgb(18, 162, 184);
       box-shadow: 0 8px 10px 0 rgb(18, 162, 184, 0.5);
     }
-    .connect__page .interface__step .filter__label {
+    .connect__page .interface__step .filter__label,
+    .connect__page .tick__check-boxes .tick__check-label {
       background: #1d2936;
     }
     .connect__page .interface__step .filter__label::before {
@@ -421,7 +422,13 @@ body {
     .replenishment .select__wallet .cart__box .check__label {
       background: #253444;
     }
-    //
+    .connect__page
+      .tick__check-boxes
+      .tick__check-input:checked
+      + .tick__info
+      .tick__check-label::after {
+      opacity: 1;
+    }
   }
 }
 

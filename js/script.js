@@ -173,14 +173,60 @@ const footerCol = document.querySelectorAll(".footer .coll");
 footerCol.forEach((col) => {
   const footerHeader = col.querySelector(".col__header");
   const footerUl = col.querySelector("ul");
-  const footerArrowDown = col.querySelector('.footer__arrow-down');
+  const footerArrowDown = col.querySelector(".footer__arrow-down");
 
   footerHeader.addEventListener("click", () => {
     footerUl.classList.toggle("show");
-    footerArrowDown.classList.toggle('rotate')
+    footerArrowDown.classList.toggle("rotate");
   });
 });
 
+// tab content
+try {
+  const tabContents = document.querySelectorAll(".tab__content");
+  const tabHeaderItems = document.querySelectorAll(".tab__header-item");
+
+  if (tabContents) {
+    function hideTabContent() {
+      tabContents.forEach((content) => {
+        content.classList.remove("show");
+        content.classList.add("hide");
+      });
+      tabHeaderItems.forEach((item) => item.classList.remove("checked"));
+    }
+    // function showTabContent(idx = 1) {
+    //   tabContents[idx].classList.remove("hide");
+    //   tabContents[idx].classList.add("show");
+    //   tabHeaderItems[idx].classList.add("checked");
+    // }
+    function showTabContent(idx = 1) {
+      tabContents.forEach((content, index) => {
+        content.classList.remove("show");
+        content.classList.add("hide");
+      });
+      tabHeaderItems.forEach((item) => item.classList.remove("checked"));
+
+      tabContents[idx].classList.remove("hide");
+      tabContents[idx].classList.add("show");
+      tabHeaderItems[idx].classList.add("checked");
+
+      const stepNumberElement = document.querySelector(".step__number");
+      stepNumberElement.textContent = idx + 1;
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    tabHeaderItems.forEach((btn, idx) => {
+      btn.addEventListener("click", (e) => {
+        hideTabContent();
+        showTabContent(idx);
+      });
+    });
+  }
+} catch (error) {
+  console.log(error);
+}
 // reviews swiper
 try {
   let swiper = document.querySelector(".reviews-swiper");
@@ -215,5 +261,5 @@ try {
     });
   }
 } catch (error) {
-  throw error;
+  console.log(error);
 }
