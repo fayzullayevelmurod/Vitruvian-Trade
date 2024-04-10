@@ -101,39 +101,26 @@
       width: 20px;
       height: 20px;
       background: #e2e2e2;
-      display: block;
+      display: inline-block;
+      display: flex;
       border-radius: 50%;
       cursor: pointer;
+      border: 1px solid transparent;
 
       &.checked {
         background: transparent;
-        &::before {
-          transform: scale(1);
-        }
+        border-color: #007bff;
         &::after {
-          transform: scale(1) translate(-50%, -50%);
+          display: block;
         }
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border: 1px solid #067eff;
-        height: 100%;
-        border-radius: 50%;
-        transition: all 0.3s linear;
-        transform-origin: center;
-        transform: scale(0);
       }
       &::after {
         content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%);
+        display: none;
         width: 8px;
         background: rgb(6, 126, 255);
         height: 8px;
@@ -326,7 +313,12 @@
     }
   }
 }
-
+.media__hand {
+  display: none;
+}
+.bonus__box.media__block{
+  display: none;
+}
 // media query start
 @media screen and (max-width: 1155px) {
   .connect__page .interface .container {
@@ -346,6 +338,25 @@
   .connect__page .activation__course-title-sm,
   .connect__page .activation__course-info {
     margin-left: 0;
+  }
+  .connect__page .illustration-money {
+    display: none;
+  }
+  .media__hand {
+    display: block;
+    margin: 0 auto;
+    width: 173px;
+    height: 293px;
+    transform: translateY(-70px);
+  }
+  .activation__course .bonus__box {
+    margin-top: 50px;
+  }
+  .bonus__box.media__block{
+  display: block;
+} 
+  .bonus__box.media__none {
+    display: none;
   }
 }
 @media screen and (max-width: 992px) {
@@ -405,5 +416,12 @@
   }
   .connect__page .discount .blue_btn {
     width: 100%;
+  }
+  .connect__page .filter__btns {
+    flex-direction: column;
+  }
+  .connect__page .filter__btns .gray_btn {
+    width: 100%;
+    height: 40px;
   }
 }

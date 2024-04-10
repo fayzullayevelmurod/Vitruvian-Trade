@@ -195,7 +195,7 @@ try {
       tabHeaderItems.forEach((item) => item.classList.remove("checked"));
     }
 
-    function showTabContent(idx = 1) {
+    function showTabContent(idx = 0) {
       tabContents.forEach((content, index) => {
         content.classList.remove("show");
         content.classList.add("hide");
@@ -223,6 +223,17 @@ try {
 } catch (error) {
   console.log(error);
 }
+
+// interface cards
+const interFaceCards = document.querySelectorAll(".interface__card");
+
+interFaceCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    interFaceCards.forEach((item) => item.classList.remove("active"));
+    card.classList.add("active");
+  });
+});
+
 // reviews swiper
 try {
   let swiper = document.querySelector(".reviews-swiper");

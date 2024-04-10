@@ -183,6 +183,10 @@
   }
   .open__nav-btn {
     display: block !important;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
   .media__header {
     display: block;
@@ -204,6 +208,10 @@
     .close__nav-btn {
       display: block;
       margin: 0 0 43px auto;
+
+      svg {
+        width: 30px;
+      }
 
       &.light_border {
         margin: 0;

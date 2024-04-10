@@ -147,13 +147,15 @@
     &:last-child {
       border-bottom: none;
     }
-    & > div {
+    & > div,
+    & > a {
       display: flex;
       align-items: center;
       justify-content: space-between;
       max-width: 632px;
       width: 100%;
       gap: 1rem;
+      color: #343a40;
     }
     .left__box {
       display: flex;

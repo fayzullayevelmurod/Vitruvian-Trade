@@ -415,7 +415,8 @@
     border: 1px solid transparent;
     transition: all 0.3s linear;
 
-    &:hover {
+    &:hover,
+    &.active {
       border-color: #007bff;
       box-shadow: 0px 15px 20px 0px rgba(0, 123, 255, 0.3);
     }
@@ -575,14 +576,15 @@
   .main__statistics-tr {
     padding: 7px 20px 7px 20px;
   }
-  .media__table-header {
-    display: block;
-  }
   .statistics__header-box.media__none {
     display: none;
   }
   .main__statistics-box {
     max-width: 100%;
+
+    &:last-child {
+      display: none;
+    }
   }
   .main__statistics-header .statistics__header-box {
     max-width: 100%;
@@ -803,12 +805,16 @@
   .main__statistics-header {
     padding: 15px 20px 15px 20px;
   }
+  .connect__page .interface__cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    width: 100%;
+    .interface__card {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 440px) {
-  // .tariffs_bitcoin {
-  //   top: 10%;
-  // }
   .tariffs_ethereum {
     width: 50px;
     top: 16px;
