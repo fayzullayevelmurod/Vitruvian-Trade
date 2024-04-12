@@ -134,22 +134,22 @@
             </svg>
           </div>
         </div>
-        <button class="open__nav-btn" aria-label="open__nav-btn">
+        <div class="open__nav-btn" aria-label="open__nav-btn">
           <svg width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor" class="w-6 h-6 light_icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
             </path>
           </svg>
-        </button>
+        </div>
       </div>
       <div class="container">
         <nav class="nav dark_border">
-          <button class="close__nav-btn light_icon" aria-label="close nav btn">
+          <div class="close__nav-btn light_icon" aria-label="close nav btn">
             <svg width="20px" heght="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
-          </button>
+          </div>
           <ul class="nav_list">
             <li class="nav_item">
               <a class="nav_link light_text" href="#!">Статистика</a>
@@ -274,12 +274,11 @@ V400l0,0v66.7C600,485.1,585,500,566.7,500z"></path>
             <div class="interface__step-left">
               <h3 class="interface__step-title">Шаг <span class="step__number">1</span> из 3</h3>
               <div class="filter__inputs">
-                <button for="first__step" aria-label="filter btn first__step"
-                  class="filter__label tab__header-item checked"></button>
-                <button for="second__step" aria-label="filter btn second__step"
-                  class="filter__label tab__header-item"></button>
-                <button for="three__step" aria-label="filter btn three__step"
-                  class="filter__label tab__header-item"></button>
+                <div for="first__step" aria-label="filter btn first__step"
+                  class="filter__label tab__header-item checked"></div>
+                <div for="second__step" aria-label="filter btn second__step" class="filter__label tab__header-item">
+                </div>
+                <div for="three__step" aria-label="filter btn three__step" class="filter__label tab__header-item"></div>
               </div>
             </div>
             <a class="blue_btn" href="#!">Подключить позже</a>
@@ -1403,6 +1402,9 @@ V400l0,0v66.7C600,485.1,585,500,566.7,500z"></path>
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="lesson video"></iframe>
+                <!-- <video controls poster="image.png" width="500">
+                  <source src="https://www.youtube.com/embed/p3jlmra69Og?si=Y_PAnkMTgKBJtMyI" type="video/mp4" />
+                </video> -->
                 <div class="lesson__video-description">
                   <p>Как создать API на Vitruvian Trade</p>
                 </div>

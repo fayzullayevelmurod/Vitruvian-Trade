@@ -11,6 +11,7 @@ body {
   background: #f5f5f5;
   color: #343a40;
   transition: all 0.2s ease-in-out;
+  font-display: swap;
   &.dark {
     color: #fff;
     background: #121921;

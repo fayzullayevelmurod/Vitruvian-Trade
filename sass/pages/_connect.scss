@@ -316,7 +316,7 @@
 .media__hand {
   display: none;
 }
-.bonus__box.media__block{
+.bonus__box.media__block {
   display: none;
 }
 // media query start
@@ -352,9 +352,9 @@
   .activation__course .bonus__box {
     margin-top: 50px;
   }
-  .bonus__box.media__block{
-  display: block;
-} 
+  .bonus__box.media__block {
+    display: block;
+  }
   .bonus__box.media__none {
     display: none;
   }
@@ -381,7 +381,6 @@
   }
   .connect__page .filter__btns {
     gap: 1rem;
-
     .gray_btn {
       flex: 1 1 0;
     }
@@ -406,6 +405,16 @@
     margin-left: 0;
   }
 }
+@media screen and (max-width: 535px) {
+  .connect__page .filter__btns {
+    flex-wrap: nowrap;
+    gap: 3px;
+  }
+  .connect__page .filter__btns .gray_btn {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 460px) {
   .connect__page .interface__step .blue_btn {
     width: 100%;
@@ -418,7 +427,7 @@
     width: 100%;
   }
   .connect__page .filter__btns {
-    flex-direction: column;
+    // flex-direction: column;
   }
   .connect__page .filter__btns .gray_btn {
     width: 100%;
