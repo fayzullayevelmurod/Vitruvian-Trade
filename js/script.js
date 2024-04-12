@@ -64,13 +64,22 @@ const mediaNav = document.querySelector(".media__header");
 openNavBtn.addEventListener("click", () => {
   nav.classList.add("active");
   mediaNav.classList.toggle("active");
+  document.body.style.overflow = "hidden";
 });
 closeNavBtn.forEach((btn) =>
   btn.addEventListener("click", () => {
     nav.classList.remove("active");
     mediaNav.classList.remove("active");
+    document.body.style.overflow = "auto";
   })
 );
+document.addEventListener("click", function (e) {
+  var target = e.target;
+  if (!mediaNav.contains(target) && target != openNavBtn) {
+    mediaNav.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
 // accordion
 const showMoreLessons = document.querySelector(".show__mode-lessons");
 
