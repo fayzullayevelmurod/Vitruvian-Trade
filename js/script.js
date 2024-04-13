@@ -194,6 +194,7 @@ footerCol.forEach((col) => {
 try {
   const tabContents = document.querySelectorAll(".tab__content");
   const tabHeaderItems = document.querySelectorAll(".tab__header-item");
+  const nextTabBtn = document.querySelectorAll(".next-tab");
 
   if (tabContents) {
     function hideTabContent() {
@@ -226,6 +227,17 @@ try {
       btn.addEventListener("click", (e) => {
         hideTabContent();
         showTabContent(idx);
+      });
+    });
+    nextTabBtn.forEach((btn, idx) => {
+      btn.addEventListener("click", (e) => {
+        const currentTab = document.querySelector(".tab__header-item.checked");
+        const nextTab = currentTab.nextElementSibling;
+        if (nextTab) {
+          hideTabContent();
+          nextTab.classList.add("checked");
+          showTabContent(Array.from(tabHeaderItems).indexOf(nextTab));
+        }
       });
     });
   }
